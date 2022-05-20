@@ -1,13 +1,261 @@
-.containerH{
-    width: 100%;
-    height: 100px;
-    background-color: blue;
-    display: flex;
-}
-.logoH{
-    width: 80px;
-    height: 40px;
-}
-.body_I{
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
     margin: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.containerH {
+    position: relative;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    position: relative;
+    background-color: #000aff;
+}
+.containerH .chaveE {
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 20px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: url(https://i.imgur.com/yqyyC1j.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: reverse0 1s both;
+}
+
+.containerH .logoH {
+    position: absolute;
+    height: 50px;
+    width: 0px;
+    margin-top: 25px;
+    margin-left: 35px;
+    background: url(https://i.imgur.com/mtqP8Hy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: reverse1 1s both;
+    pointer-events: none;
+}
+
+.containerH .chaveD {
+    position: absolute;
+    margin-top: 24px;
+    margin-left: 50px;
+    height: 50px;
+    width: 30px;
+    position: absolute;
+    background: url(https://i.imgur.com/QDPc2ez.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    animation: reverse2 1s both;
+}
+
+.containerH .chaveE:hover{
+    animation: animate0 1s both;
+}
+.containerH .chaveE:hover +.logoH {
+    animation: animate1 1s both;
+}
+
+.containerH .chaveE:hover ~.chaveD {
+    animation: animate2 1s both;
+}
+
+@keyframes animate0 {
+    0% {
+        width: 50px;
+    }
+
+    100% {
+        width: 220px;
+    }
+}
+@keyframes reverse0 {
+    0% {
+        width: 220px;
+    }
+
+    100% {
+        width: 50px;
+    }
+}
+
+@keyframes animate1 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 189px;
+    }
+}
+
+@keyframes reverse1 {
+    0% {
+        width: 189px;
+    }
+
+    100% {
+        width: 0px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: 175px;
+    }
+}
+
+@keyframes reverse2 {
+    0% {
+        left: 175px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.navbar {
+    position: absolute;
+    margin-left: 350px;
+    width: 1050px;
+    color: rgb(255, 255, 255);
+    list-style: none;
+    align-items: center;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    font-size: 30px;
+}
+.navbar .btn_II{
+    height: 100px;
+    width: 80px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    border-top: 5px white solid;
+    background-color: #000aff;
+    color: white;
+    transition: 0.2s;
+}
+.navbar .btn_II:hover{
+    text-shadow: 2px 2px black;
+}
+.navbar .btn_N{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 90px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #000aff;
+    color: white;
+    transition: 0.2s;
+}
+.navbar .btn_N:hover{
+    border-top: 5px white solid;
+    text-shadow: 2px 2px black;
+}
+.navbar .btn_C{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 90px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #000aff;
+    color: white;
+    transition: 0.2s;
+}
+.navbar .btn_C:hover{
+    border-top: 5px white solid;
+    text-shadow: 2px 2px black;
+}
+.navbar .btn_J{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 90px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #000aff;
+    color: white;
+    transition: 0.2s;
+}
+.navbar .btn_J:hover{
+    border-top: 5px white solid;
+    text-shadow: 2px 2px black;
+}
+.navbar .btn_E{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 90px;
+    font-size: 26px;
+    cursor: pointer;
+    border: none;
+    background-color: #000aff;
+    color: white;
+    transition: 0.2s;
+}
+.navbar .btn_E:hover{
+    border-top: 5px white solid;
+    text-shadow: 2px 2px black;
+}
+.navbar .btn_L{
+    padding: 0;
+    margin-left: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 90px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #000aff;
+    color: white;
+    transition: 0.2s;
+}
+.navbar .btn_L:hover{
+    border-top: 5px white solid;
+    text-shadow: 2px 2px black;
+}
+.LL{
+    position: absolute;
+    margin-left: 1390px;
+    width: 50px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img_L{
+    height: 50px;
+    width: 50px;
+}
+.V_I{
+    width: 100vw;
+    height: 600px;
 }

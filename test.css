@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: blue;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    position: relative;
+}
+
+.header .logoH {
+    margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+    width: 510px;
+    height: 80px;
+    background: url(https://i.imgur.com/L4raPnd.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header .logoH:hover:before  {
+    content: '';
+    position: absolute;
+    top: 10;
+    left: 30;
+    width: 100%;
+    height: 100%;
+    background: url(https://i.imgur.com/R5MSUek.png);
+    background-repeat: no-repeat;
+    animation: animate 2.7s both;
+}
+
+.header .chave {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 80px;
+    width: 510px;
+    position: absolute;
+    background: url(https://i.imgur.com/gRmr1CT.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 25;
+    top: -2;
+    pointer-events: none;
+}
+.header .logoH:hover + .chave {
+    animation: animate2 1s both;
+}
+
+@keyframes animate2{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: 480px;
+    }
+}
+@keyframes animate {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+}
