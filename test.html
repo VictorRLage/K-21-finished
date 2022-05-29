@@ -1,5 +1,49 @@
-<link rel="stylesheet" href="test.css">
-<div class="header">
-    <div class="logoH"></div>
-    <div class="chave"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Document</title>
+</head>
+<body>
+	<div class="carro">
+		<div class="conteinerCarro" id="move">
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		</div>
+		<!-- controls -->
+		<div class="cont">
+			<div class="esquerda controles" id="l"></div>
+			<div class="direita controles" id="r"></div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+    let x = 0;
+	let p = -10;
+	let i = 1;
+	let doom = document.getElementsByClassName('item');
+	let confr = (doom.length - 3)*(-350);
+	let confl = 0;
+	//left
+	document.getElementById("l").addEventListener("click", function(){
+   		x += 350;
+   		if (x > confl){x = confr - 350}else{
+    	document.getElementById("move").style.marginLeft = x + "px";}
+	});
+	//right
+	document.getElementById("r").addEventListener("click", function(){
+		x += -350;
+		p += -10;
+		if (x < confr){x = 350}else{
+    	document.getElementById("move").style.marginLeft = x + "px";}
+	});
+</script>

@@ -1,74 +1,70 @@
-* {
-    margin: 0;
-}
-
 body {
-    display: flex;
-    min-height: 100vh;
-    background-color: blue;
+    background-color: #444;
 }
 
-.header {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    position: relative;
+.controles {
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .2);
 }
 
-.header .logoH {
-    margin-top: 10px;
-    margin-left: 10px;
-    position: relative;
-    width: 510px;
-    height: 80px;
-    background: url(https://i.imgur.com/L4raPnd.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+.esquerda {
+    float: left;
 }
 
-.header .logoH:hover:before  {
-    content: '';
+.direita {
+    float: right;
+}
+
+.carro {
+    width: 1100px;
+    margin: auto;
+    height: 450px;
+    margin-top: 120px;
+    overflow: hidden;
+}
+
+.controles:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.item {
+    width: 335px;
+    height: 400px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: #202225;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s all;
+    box-shadow: 0 9px 10px rgba(6, 6, 7, .3);
+}
+
+.cont {
     position: absolute;
-    top: 10;
-    left: 30;
-    width: 100%;
-    height: 100%;
-    background: url(https://i.imgur.com/R5MSUek.png);
-    background-repeat: no-repeat;
-    animation: animate 2.7s both;
+    width: 1100px;
+    margin-top: 190px;
 }
 
-.header .chave {
-    margin-top: 10px;
-    margin-left: 10px;
-    height: 80px;
-    width: 510px;
-    position: absolute;
-    background: url(https://i.imgur.com/gRmr1CT.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    left: 25;
-    top: -2;
-    pointer-events: none;
-}
-.header .logoH:hover + .chave {
-    animation: animate2 1s both;
+.conteinerCarro {
+    width: 12000px;
+    /* 	change if the size is >     12000  :) */
+    transition: .9s all;
 }
 
-@keyframes animate2{
-    0%{
-        left: 0px;
-    }
-    100%{
-        left: 480px;
-    }
+.item img {
+    width: 70px;
+    margin-top: 20px;
 }
-@keyframes animate {
-    0% {
-        width: 0%;
-    }
 
-    50% {
-        width: 100%;
-    }
+.item:hover {
+    margin-top: -5px;
 }
