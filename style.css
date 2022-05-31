@@ -504,6 +504,7 @@ body {
     margin-top: 40px;
     letter-spacing: 4px;
     transition: 0.2s;
+    cursor: pointer;
   }
   
   .btnLogarL:hover {
@@ -697,6 +698,7 @@ body {
   letter-spacing: 4px;
   transition: 0.2s;
   margin-left: 90px;
+  cursor: pointer;
 }
 
 .btnLogarC:hover {

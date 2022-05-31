@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Login || K-22</title>
+</head>
+
+<body class="corpoL">
+    <!--Header-->
+    <header>
+        <div class="containerH">
+            <div class="chaveE"></div>
+            <div class="logoH"></div>
+            <div class="chaveD"></div>
+
+            <ul class="navbar">
+                <li><button class="btn_I" onclick="window.location.href='index.html'">Inicio</button></li>
+                <li><button class="btn_20" onclick="window.location.href='2020.html'">2020</button></li>
+                <li><button class="btn_21" onclick="window.location.href='2021.html'">2021</button></li>
+                <li><button class="btn_22" onclick="window.location.href='2022.html'">2022</button></li>
+                <li><button class="btn_AT" onclick="window.location.href='alltime.html'">ALL TIME</button></li>
+                <li><button class="btn_LX" onclick="window.location.href='login.html'">Login</button></li>
+            </ul>
+            <div class="LL"><img class="img_L" src="https://i.imgur.com/jfzM7hF.png"></div>
+        </div>
+    </header>
+    <!--Fim Header-->
+    <div class="containerL">
+        <div class="cardLL">
+            <div class="cardL">
+                <h2 id="h2teste">Iniciar sessão</h2>
+                <div class="inputL">
+                    <input type="displayname" id="nomeU_input" name="displayname" required="">
+                    <label>Nome de usuário</label>
+                </div>
+                <div class="inputL">
+                    <input type="password" id="senha_input" name="password" required="">
+                    <label>Senha</label>
+                </div>
+                <div class="btnLogarLL">
+                    <button onclick="entrar()" class="btnLogarL">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Entrar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cardOULL">
+            <div class="cardOUL">
+                <span>OU</span>
+            </div>
+        </div>
+        <div class="cardbtnLL">
+            <div class="cardbtnL">
+                <button class="btnCadL" onclick="window.location.href='cadastro.html'">&nbsp; &nbsp; Cadastre-se para
+                    participar das nossas votações</button>
+            </div>
+        </div>
+    </div>
+    <!--MODALs-->
+    <div class="modal-containerALERTA" id="modal_containerALERTA">
+        <div class="modalALERTA">
+            <h1 id="msgALERTA"></h1>
+        </div>
+    </div>
+    </div>
+    <!--FIM MODALs-->
+    <!--FOOTER-->
+    <footer>
+        <script src="https://kit.fontawesome.com/1de2b6cbbf.js" crossorigin="anonymous"></script>
+        <div class="footer-content">
+            <div class="footerEsquerda">
+                <div class="logoFF">
+                    <img class="chaveFE" src="https://i.imgur.com/yqyyC1j.png">
+                    <img class="logoF" src="https://i.imgur.com/CujXbZW.png">
+                    <img class="chaveFD" src="https://i.imgur.com/QDPc2ez.png">
+                </div>
+                <ul class="sociais">
+                    <li><a class="a_f" href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-twitch"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+            <div class="footerDireita">
+                <hr class="hr1F">
+                <ul class="juridicoF">
+                    <li><a class="linksF" href="">SAC</a></li>
+                    <li><a class="linksF" href="">Juridico</a></li>
+                    <li><a class="linksF" href="">Contato</a></li>
+                </ul>
+                <ul class="juridicoF">
+                    <li><a class="linksF" href="">Termos</a></li>
+                    <li><a class="linksF" href="">Privacidade</a></li>
+                    <li><a class="linksF" href="">Inscrições</a></li>
+                </ul>
+                <hr class="hr2F">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2022 Prêmio K-22</p>
+        </div>
+    </footer>
+    <!--FIM FOOTER-->
+</body>
+
+</html>
+<script>
+
+    function entrar() {
+        msgALERTA.innerHTML = ``
+        const modal_containerALERTA = document.getElementById('modal_containerALERTA');
+
+        var nomeUVar = nomeU_input.value;
+        var senhaVar = senha_input.value;
+
+        if (nomeUVar == "" || senhaVar == "") {
+            msgALERTA.innerHTML = `Credenciais invalidas`
+            modal_containerALERTA.classList.add('showALERTA');
+            modal_containerALERTA.addEventListener('click', () => {
+                modal_containerALERTA.classList.remove('showALERTA');
+            });
+            return;
+        }
+
+        console.log("FORM LOGIN: ", nomeUVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nomeUServer: nomeUVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./2022.html";
+                    }); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+                msgALERTA.innerHTML = `Credenciais invalidas`
+                modal_containerALERTA.classList.add('showALERTA');
+                modal_containerALERTA.addEventListener('click', () => {
+                    modal_containerALERTA.classList.remove('showALERTA');
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+</script>

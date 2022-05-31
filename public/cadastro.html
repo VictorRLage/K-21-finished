@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cadastro || K-22</title>
+</head>
+
+<body class="corpoC">
+    <!--Header-->
+    <header>
+        <div class="containerH">
+            <div class="chaveE"></div>
+            <div class="logoH"></div>
+            <div class="chaveD"></div>
+
+            <ul class="navbar">
+                <li><button class="btn_I" onclick="window.location.href='index.html'">Inicio</button></li>
+                <li><button class="btn_20" onclick="window.location.href='2020.html'">2020</button></li>
+                <li><button class="btn_21" onclick="window.location.href='2021.html'">2021</button></li>
+                <li><button class="btn_22" onclick="window.location.href='2022.html'">2022</button></li>
+                <li><button class="btn_AT" onclick="window.location.href='alltime.html'">ALL TIME</button></li>
+                <li><button class="btn_L" onclick="window.location.href='login.html'">Login</button></li>
+            </ul>
+            <div class="LL"><img class="img_L" src="https://i.imgur.com/jfzM7hF.png"></div>
+        </div>
+    </header>
+    <!--Fim Header-->
+    <div class="containerC">
+        <div class="cardCC">
+            <div class="cardC">
+                <h2 id="h2teste">Criar conta</h2>
+                <div class="inputC">
+                    <input type="text" id="nome_input" name="name" required="">
+                    <label>Nome completo</label>
+                </div>
+                <div class="inputC">
+                    <input type="displayname" id="nomeU_input" name="displayname" onkeyup="verificar()" required=""><img id="imagemNomeU" class="verificacao" style="display: none;" src="https://i.imgur.com/tk0UfYf.png" aling="center">
+                    <label>Nome de usuario</label>
+                </div>
+                <div class="inputC">
+                    <input type="text" id="email_input" name="email" required="">
+                    <label>E-mail</label>
+                </div>
+                <div class="inputC">
+                    <input type="password" id="senha_input" name="password" required="">
+                    <label>Senha</label>
+                </div>
+                <div class="inputC">
+                    <input type="password" id="confirmacao_senha_input" name="password" required="">
+                    <label>Confirmar senha</label>
+                </div>
+                <div class="btnLogarCC">
+                    <button onclick="cadastrar()" class="btnLogarC">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Cadastrar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cardC2">
+            <span><b>Cadastre-se</b> e escolha <br> os <b>ganhadores</b> da maior <br> <b>premiação</b> de jogos <br>
+                digitais do <b>mundo</b>. </span>
+        </div>
+    </div>
+    <!--CAPTCHA-->
+    <div class="modal-containerCapC" id="modal_containerCapC">
+        <div class="modalCapC">
+            <h1>Por favor valide o captcha</h1>
+            <div class="contaC">
+                <p><span class="numero2C" id="numero1"></span> + <span class="numero2C" id="numero2"></span></p>
+            </div>
+            <input type="number" id="resposta">
+            <button onclick="captcha()" autofocus class="closeCapC" id="closeCapC">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Verificar
+            </button>
+        </div>
+        <div class="modal-containerERROC" id="modal_containerERROC">
+            <div class="modalERROC">
+                <h1>captcha invalido</h1>
+            </div>
+        </div>
+    </div>
+    <!--FIM CAPTCHA-->
+    <!--MODALs-->
+    <div class="modal-containerALERTA" id="modal_containerALERTA">
+        <div class="modalALERTA">
+            <h1 id="msgALERTA"></h1>
+        </div>
+    </div>
+    </div>
+    <!--FIM MODALs-->
+    <!--FOOTER-->
+    <footer>
+        <script src="https://kit.fontawesome.com/1de2b6cbbf.js" crossorigin="anonymous"></script>
+        <div class="footer-content">
+            <div class="footerEsquerda">
+                <div class="logoFF">
+                    <img class="chaveFE" src="https://i.imgur.com/yqyyC1j.png">
+                    <img class="logoF" src="https://i.imgur.com/CujXbZW.png">
+                    <img class="chaveFD" src="https://i.imgur.com/QDPc2ez.png">
+                </div>
+                <ul class="sociais">
+                    <li><a class="a_f" href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-twitch"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a class="a_f" href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+            <div class="footerDireita">
+                <hr class="hr1F">
+                <ul class="juridicoF">
+                    <li><a class="linksF" href="">SAC</a></li>
+                    <li><a class="linksF" href="">Juridico</a></li>
+                    <li><a class="linksF" href="">Contato</a></li>
+                </ul>
+                <ul class="juridicoF">
+                    <li><a class="linksF" href="">Termos</a></li>
+                    <li><a class="linksF" href="">Privacidade</a></li>
+                    <li><a class="linksF" href="">Inscrições</a></li>
+                </ul>
+                <hr class="hr2F">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2022 Prêmio K-22</p>
+        </div>
+    </footer>
+    <!--FIM FOOTER-->
+</body>
+
+</html>
+<script>
+    function verificar(){
+        var nomeUVar = nomeU_input.value;
+        fetch("/usuarios/verificar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nomeUServer: nomeUVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                imagemNomeU.style.display =`inline`
+                imagemNomeU.src=`https://i.imgur.com/aKQCcmW.png`
+                throw ("valido");
+
+            } else {
+                imagemNomeU.style.display =`inline`
+                imagemNomeU.src=`https://i.imgur.com/tk0UfYf.png`
+                throw ("invalido");
+                
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+
+        });
+
+        return false;
+    }
+</script>
+<script>
+    function cadastrar() {
+        msgALERTA.innerHTML = ``
+        const modal_containerALERTA = document.getElementById('modal_containerALERTA');
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var nomeUVar = nomeU_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || nomeUVar == "") {
+            msgALERTA.innerHTML = `Por favor preencha todos os campos`
+            modal_containerALERTA.classList.add('showALERTA');
+            modal_containerALERTA.addEventListener('click', () => {
+                modal_containerALERTA.classList.remove('showALERTA');
+            });
+
+            return;
+        } else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            msgALERTA.innerHTML = `Por favor insira um email valido!`
+            modal_containerALERTA.classList.add('showALERTA');
+            modal_containerALERTA.addEventListener('click', () => {
+                modal_containerALERTA.classList.remove('showALERTA');
+            });
+            return;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                nomeUServer: nomeUVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                msgALERTA.innerHTML = `Cadastro realizado com sucesso`
+                modal_containerALERTA.classList.add('showCONFIR');
+                modal_containerALERTA.addEventListener('click', () => {
+                    modal_containerALERTA.classList.remove('showCONFIR');
+                });
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, 1500)
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                msgALERTA.innerHTML = `Esse nome de usuario já existe por favor tente novamente`
+                modal_containerALERTA.classList.add('showALERTA');
+                modal_containerALERTA.addEventListener('click', () => {
+                    modal_containerALERTA.classList.remove('showALERTA');
+                });
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+
+        });
+
+        return false;
+    }
+</script>
+
+<!--SCRIPT CAPTCHA-->
+<script>
+
+    let aleatorio1 = Number(parseInt(Math.random() * 100))
+    let aleatorio2 = Number(parseInt(Math.random() * 100))
+
+
+    numero1.innerHTML = `${aleatorio1}`
+    numero2.innerHTML = `${aleatorio2}`
+
+    function captcha() {
+        let conta = aleatorio1 + aleatorio2
+        let r = Number(resposta.value)
+        const modal_containerCapC = document.getElementById('modal_containerCapC');
+        const modal_containerERROC = document.getElementById('modal_containerERROC');
+        if (r == conta) {
+            modal_containerCapC.classList.add('showCapC');
+        }
+        else if (r == 0) {
+            modal_containerCapC.classList.add('showCapC');
+        }
+        else {
+            modal_containerERROC.classList.add('showERROC');
+            modal_containerERROC.addEventListener('click', () => {
+                modal_containerERROC.classList.remove('showERROC');
+            });
+            let aleatorio1 = Number(parseInt(Math.random() * 100))
+            let aleatorio2 = Number(parseInt(Math.random() * 100))
+
+
+            numero1.innerHTML = `${aleatorio1}`
+            numero2.innerHTML = `${aleatorio2}`
+        }
+    }
+</script>
+<!--FIM SCRIPT CAPTCHA-->

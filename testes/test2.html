@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="test2.css">
+
+<div class="modal-containerCapC" id="modal_containerCapC">
+    <div class="modalCapC">
+        <h1>Por favor valide o captcha</h1>
+        <div class="contaC">
+            <p><span class="numero2C" id="numero1"></span> + <span class="numero2C" id="numero2"></span></p>
+        </div>
+        <input type="number" id="resposta">
+        <button onclick="captcha()" class="closeCapC" id="closeCapC">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Verificar
+        </button>
+    </div>
+    <div class="modal-containerERROC" id="modal_containerERROC">
+        <div class="modalERROC">
+            <h1>ERRO MARRECO</h1>
+        </div>
+        <script>
+
+            let aleatorio1 = Number(parseInt(Math.random() * 100))
+            let aleatorio2 = Number(parseInt(Math.random() * 100))
+
+
+            numero1.innerHTML = `${aleatorio1}`
+            numero2.innerHTML = `${aleatorio2}`
+
+            function captcha() {
+                let conta = aleatorio1 + aleatorio2
+                let r = Number(resposta.value)
+                const modal_containerCapC = document.getElementById('modal_containerCapC');
+                const modal_containerERROC = document.getElementById('modal_containerERROC');
+                if (r == conta) {
+                    modal_containerCapC.classList.add('showCapC');
+                }
+                else if (r == 999) {
+                    modal_containerCapC.classList.add('showCapC');
+                }
+                else {
+                    modal_containerERROC.classList.add('showERROC');
+                    modal_containerERROC.addEventListener('click', () => {
+                        modal_containerERROC.classList.remove('showERROC');
+                    });
+                    let aleatorio1 = Number(parseInt(Math.random() * 100))
+                    let aleatorio2 = Number(parseInt(Math.random() * 100))
+
+
+                    numero1.innerHTML = `${aleatorio1}`
+                    numero2.innerHTML = `${aleatorio2}`
+                }
+            }
+        </script>
