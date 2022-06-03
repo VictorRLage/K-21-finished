@@ -156,7 +156,7 @@ body {
 
 .navbar {
   position: absolute;
-  margin-left: 350px;
+  margin-left: 400px;
   width: 1050px;
   color: rgb(255, 255, 255);
   list-style: none;
@@ -168,8 +168,10 @@ body {
 }
 
 .navbar .btn_I {
+  
+  width: 200px;
+  word-spacing: 5px;
   height: 100px;
-  width: 80px;
   font-size: 30px;
   cursor: pointer;
   border: none;
@@ -183,50 +185,13 @@ body {
   text-shadow: 2px 2px black;
 }
 
-.navbar .btn_20 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 90px;
-  font-size: 30px;
-  cursor: pointer;
-  border: none;
-  background-color: #000aff;
-  color: white;
-  transition: 0.2s;
-}
-
-.navbar .btn_20:hover {
-  border-top: 5px white solid;
-  text-shadow: 2px 2px black;
-}
-
-.navbar .btn_21 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 90px;
-  font-size: 30px;
-  cursor: pointer;
-  border: none;
-  background-color: #000aff;
-  color: white;
-  transition: 0.2s;
-}
-
-.navbar .btn_21:hover {
-  border-top: 5px white solid;
-  text-shadow: 2px 2px black;
-}
-
 .navbar .btn_22 {
+  width: 200px;
+  word-spacing: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
-  width: 90px;
   font-size: 30px;
   cursor: pointer;
   border: none;
@@ -241,11 +206,12 @@ body {
 }
 
 .navbar .btn_AT {
+  width: 200px;
+  word-spacing: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
-  width: 90px;
   font-size: 26px;
   cursor: pointer;
   border: none;
@@ -266,7 +232,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100px;
-  width: 90px;
+  width: 200px;
+  word-spacing: 5px;
   font-size: 30px;
   cursor: pointer;
   border: none;
@@ -521,7 +488,8 @@ footer {
 /*Header inicio*/
 .navbar .btn_IX {
   height: 100px;
-  width: 80px;
+  width: 200px;
+  word-spacing: 5px;
   font-size: 30px;
   cursor: pointer;
   border: none;
@@ -564,6 +532,7 @@ footer {
   height: 20px;
   width: 20px;
 }
+
 /*Header Login*/
 .navbar .btn_LX {
   padding: 0;
@@ -572,7 +541,8 @@ footer {
   align-items: center;
   justify-content: center;
   height: 100px;
-  width: 90px;
+  width: 200px;
+  word-spacing: 5px;
   font-size: 30px;
   cursor: pointer;
   border: none;
@@ -813,6 +783,7 @@ footer {
     bottom: 100%;
   }
 }
+
 /*MODAL LOGIN*/
 .modal-containerALERTA {
   position: fixed;
@@ -834,6 +805,7 @@ footer {
   opacity: 1;
   pointer-events: auto;
 }
+
 .modal-containerALERTA.showCONFIR {
   opacity: 1;
   pointer-events: auto;
@@ -853,6 +825,7 @@ footer {
 .modalALERTA h1 {
   letter-spacing: 2px;
 }
+
 /*FIM MODAL LOGIN*/
 /*FIM TELA LOGIN*/
 
@@ -1286,91 +1259,13 @@ footer {
 
 
 
-/*TELA 2020*/
-/*Header 2020*/
-.navbar .btn_20X {
-  height: 100px;
-  width: 80px;
-  font-size: 30px;
-  cursor: pointer;
-  border: none;
-  border-top: 5px white solid;
-  background-color: #000aff;
-  color: white;
-  transition: 0.2s;
-}
-
-.navbar .btn_20X:hover {
-  text-shadow: 2px 2px black;
-}
-
-/*Fim Header 2020*/
-
-/*FIM TELA 2020*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*TELA 2021*/
-/*Header 2021*/
-.navbar .btn_21X {
-  height: 100px;
-  width: 80px;
-  font-size: 30px;
-  cursor: pointer;
-  border: none;
-  border-top: 5px white solid;
-  background-color: #000aff;
-  color: white;
-  transition: 0.2s;
-}
-
-.navbar .btn_21X:hover {
-  text-shadow: 2px 2px black;
-}
-
-/*Fim Header 2021*/
-
-/*FIM TELA 2021*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*TELA 2022*/
 /*Header 2022*/
 .navbar .btn_22X {
   height: 100px;
-  width: 80px;
+  width: 200px;
+  word-spacing: 5px;
   font-size: 30px;
   cursor: pointer;
   border: none;
@@ -1383,18 +1278,594 @@ footer {
 .navbar .btn_22X:hover {
   text-shadow: 2px 2px black;
 }
+
 /*Fim Header 2022*/
 /*Header votação*/
-.header22{
+.header22 {
+  letter-spacing: 1px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 60px;
   width: 100%;
   background-color: #0006bd;
 }
-.header22 button{
+
+.header22 button {
+  height: 40px;
   width: 200px;
   font-size: 25px;
+  color: #fff;
+  background-color: #0006bd;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
 }
+
+.categoriaANT22 {
+  margin-left: 340px;
+}
+
+
+.categoriaPROX22 {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+}
+
+.header22 button:hover {
+  transform: scale(1.05);
+}
+
+.contagemVOT {
+  color: #fff;
+  font-size: 40px;
+  margin-left: 315px;
+}
+/*Header votação*/
+
+
+
+
+
+
+
+
+
+/*VOTO JDA*/
+.conteinerVTM22{
+  width: 100%;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+}
+.tituloVTM{
+  letter-spacing: 1px;
+  padding: 20px 50px;
+  color: #fff;
+  font-size: 30px;
+  width: 100%;
+  height: 25%;
+}
+.votosVTM{
+  display: flex;
+  flex-direction: row;
+  padding: 15px 30px;
+  width: 100%;
+  height: 70%;
+}
+.setaD{
+  margin-top: 5px;
+  clip-path: polygon(21% 0%, 44% 50%, 20% 100%, 0% 100%, 25% 50%, 0% 0%);
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+
+}
+/*botão votar Deathloop*/
+.Deathloop{
+  color: #fff;
+}
+.Deathloop h4{
+  letter-spacing: 1px;
+}
+.Deathloop h1{
+  letter-spacing: 2px;
+}
+.Deathloop button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Deathloop_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Deathloop button:hover{
+  color: #03e9f4;
+}
+.DeathloopBTN:hover > span:nth-child(1){
+  display: block;
+}
+.DeathloopBTN:hover > span:nth-child(2){
+  display: block;
+}
+.DeathloopBTN:hover > span:nth-child(3){
+  display: block;
+}
+.DeathloopBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.DeathloopBTN span {
+  position: absolute;
+  display: block;
+}
+
+.DeathloopBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.DeathloopBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.DeathloopBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.DeathloopBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.DeathloopBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar ItTakesTwo*/
+.ItTakesTwo{
+  color: #fff;
+}
+.ItTakesTwo h4{
+  letter-spacing: 1px;
+}
+.ItTakesTwo h1{
+  letter-spacing: 2px;
+}
+.ItTakesTwo button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_It-Takes-Two_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.ItTakesTwo button:hover{
+  color: #03e9f4;
+}
+.ItTakesTwoBTN:hover > span:nth-child(1){
+  display: block;
+}
+.ItTakesTwoBTN:hover > span:nth-child(2){
+  display: block;
+}
+.ItTakesTwoBTN:hover > span:nth-child(3){
+  display: block;
+}
+.ItTakesTwoBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.ItTakesTwoBTN span {
+  position: absolute;
+  display: block;
+}
+
+.ItTakesTwoBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.ItTakesTwoBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.ItTakesTwoBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.ItTakesTwoBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.ItTakesTwoBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar Metroid*/
+.Metroid{
+  color: #fff;
+}
+.Metroid h4{
+  letter-spacing: 1px;
+}
+.Metroid h1{
+  letter-spacing: 2px;
+}
+.Metroid button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Metroid-Dread_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Metroid button:hover{
+  color: #03e9f4;
+}
+.MetroidBTN:hover > span:nth-child(1){
+  display: block;
+}
+.MetroidBTN:hover > span:nth-child(2){
+  display: block;
+}
+.MetroidBTN:hover > span:nth-child(3){
+  display: block;
+}
+.MetroidBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.MetroidBTN span {
+  position: absolute;
+  display: block;
+}
+
+.MetroidBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.MetroidBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.MetroidBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.MetroidBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.MetroidBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar Ratchet*/
+.Ratchet{
+  color: #fff;
+}
+.Ratchet h4{
+  letter-spacing: 1px;
+}
+.Ratchet h1{
+  letter-spacing: 2px;
+}
+.Ratchet button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Ratchet-And_Clank_1080x1080_V2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Ratchet button:hover{
+  color: #03e9f4;
+}
+.RatchetBTN:hover > span:nth-child(1){
+  display: block;
+}
+.RatchetBTN:hover > span:nth-child(2){
+  display: block;
+}
+.RatchetBTN:hover > span:nth-child(3){
+  display: block;
+}
+.RatchetBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.RatchetBTN span {
+  position: absolute;
+  display: block;
+}
+
+.RatchetBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.RatchetBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.RatchetBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.RatchetBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.RatchetBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar Resident*/
+.Resident{
+  color: #fff;
+}
+.Resident h4{
+  letter-spacing: 1px;
+}
+.Resident h1{
+  letter-spacing: 2px;
+}
+.Resident button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Resident-Evil-Village_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Resident button:hover{
+  color: #03e9f4;
+}
+.ResidentBTN:hover > span:nth-child(1){
+  display: block;
+}
+.ResidentBTN:hover > span:nth-child(2){
+  display: block;
+}
+.ResidentBTN:hover > span:nth-child(3){
+  display: block;
+}
+.ResidentBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.ResidentBTN span {
+  position: absolute;
+  display: block;
+}
+
+.ResidentBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.ResidentBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.ResidentBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.ResidentBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.ResidentBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*VOTO JDA*/
+
+
 
 /*FIM TELA 2022*/
 
@@ -1420,7 +1891,8 @@ footer {
 /*Header All Time*/
 .navbar .btn_ATX {
   height: 100px;
-  width: 80px;
+  width: 200px;
+  word-spacing: 5px;
   font-size: 29px;
   cursor: pointer;
   border: none;
