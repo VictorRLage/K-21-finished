@@ -128,11 +128,55 @@ function cadastrar(req, res) {
             );
     }
 }
+function cadastrarVotos(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var JogoDoAno = req.body.JogoDoAnoServer;
+    var Multiplayer = req.body.MultiplayerServer;
+    var Audio = req.body.AudioServer;
+    var AcaoAventura = req.body.AcaoAventuraServer;
+    var Indie = req.body.IndieServer;
+    var fkUsuario = req.body.fkUsuarioServer;
+
+    // Faça as validações dos valores
+    if (JogoDoAno == undefined) {
+        res.status(400).send("Seu JogoDoAno está undefined!");
+    } else if (Multiplayer == undefined) {
+        res.status(400).send("Seu Multiplayer está undefined!");
+    } else if (Audio == undefined) {
+        res.status(400).send("Sua Audio está undefined!");
+    }else if (AcaoAventura == undefined) {
+        res.status(400).send("Sua AcaoAventura está undefined!");
+    }else if (Indie == undefined) {
+        res.status(400).send("Sua Indie está undefined!");
+    }
+    else if (fkUsuario == undefined) {
+        res.status(400).send("Sua fkUsuario está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrarVotos(JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, fkUsuario)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
 
 module.exports = {
     entrar,
     cadastrar,
     listar,
     testar,
-    verificar
+    verificar,
+    cadastrarVotos
 }

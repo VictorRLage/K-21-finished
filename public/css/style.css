@@ -32,6 +32,7 @@ body {
 }
 
 /*Header*/
+
 .containerH {
   position: relative;
   width: 100%;
@@ -1324,6 +1325,25 @@ footer {
   margin-left: 315px;
 }
 /*Header votação*/
+/*btn votação*/
+.enviarVT{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+.enviarVTBTN{
+  border: none;
+  color: #fff;
+  background-color: #000aff;
+  font-size: 30px;
+  width: 300px;
+  height: 60px;
+  transition: .5s;
+}
+.enviarVTBTN:hover{
+  transform: scale(1.1);
+}
 
 
 
@@ -1332,29 +1352,59 @@ footer {
 
 
 
-
-/*VOTO JDA*/
+/*VOTOS*/
 .conteinerVTM22{
   width: 100%;
   height: 570px;
   display: flex;
   flex-direction: column;
 }
+.conteinerVTM222{
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.conteinerVTM2223{
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.votosVTM223{
+  display: flex;
+  flex-direction: row;
+  padding: 15px 30px;
+  width: 100%;
+  height: 70%;
+  margin-bottom: 100px;
+}
+
 .tituloVTM{
   letter-spacing: 1px;
   padding: 20px 50px;
   color: #fff;
   font-size: 30px;
   width: 100%;
-  height: 25%;
+  height: 50%;
 }
-.votosVTM{
+.tituloVTM2{
+  margin-top: 160px;
+  letter-spacing: 1px;
+  padding: 20px 50px;
+  color: #fff;
+  font-size: 30px;
+  width: 100%;
+  height: 50%;
+}
+.votosVTM22{
   display: flex;
   flex-direction: row;
   padding: 15px 30px;
   width: 100%;
   height: 70%;
 }
+
 .setaD{
   margin-top: 5px;
   clip-path: polygon(21% 0%, 44% 50%, 20% 100%, 0% 100%, 25% 50%, 0% 0%);
@@ -1396,6 +1446,7 @@ footer {
 }
   
 .Deathloop button:hover{
+  transform: scale(1.01);
   color: #03e9f4;
 }
 .DeathloopBTN:hover > span:nth-child(1){
@@ -1496,6 +1547,7 @@ footer {
 }
   
 .ItTakesTwo button:hover{
+  transform: scale(1.01);
   color: #03e9f4;
 }
 .ItTakesTwoBTN:hover > span:nth-child(1){
@@ -1596,6 +1648,7 @@ footer {
 }
   
 .Metroid button:hover{
+  transform: scale(1.01);
   color: #03e9f4;
 }
 .MetroidBTN:hover > span:nth-child(1){
@@ -1696,6 +1749,7 @@ footer {
 }
   
 .Ratchet button:hover{
+  transform: scale(1.01);
   color: #03e9f4;
 }
 .RatchetBTN:hover > span:nth-child(1){
@@ -1796,6 +1850,7 @@ footer {
 }
   
 .Resident button:hover{
+  transform: scale(1.01);
   color: #03e9f4;
 }
 .ResidentBTN:hover > span:nth-child(1){
@@ -1863,7 +1918,1530 @@ footer {
   margin-top: 105px;
   margin-left: 90px;
 }
-/*VOTO JDA*/
+
+/*botão votar FFXIV*/
+.FFXIV{
+  color: #fff;
+}
+.FFXIV h4{
+  letter-spacing: 1px;
+}
+.FFXIV h1{
+  letter-spacing: 2px;
+}
+.FFXIV button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_FINAL-FANTASY-VIV_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.FFXIV button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.FFXIVBTN:hover > span:nth-child(1){
+  display: block;
+}
+.FFXIVBTN:hover > span:nth-child(2){
+  display: block;
+}
+.FFXIVBTN:hover > span:nth-child(3){
+  display: block;
+}
+.FFXIVBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.FFXIVBTN span {
+  position: absolute;
+  display: block;
+}
+
+.FFXIVBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.FFXIVBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.FFXIVBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.FFXIVBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.FFXIVBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*VOTOS*/
+/*botão votar Cyberpunk*/
+.Cyberpunk{
+  color: #fff;
+}
+.Cyberpunk h4{
+  letter-spacing: 1px;
+}
+.Cyberpunk h1{
+  letter-spacing: 2px;
+}
+.Cyberpunk button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Cyberpunk-2077_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Cyberpunk button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.CyberpunkBTN:hover > span:nth-child(1){
+  display: block;
+}
+.CyberpunkBTN:hover > span:nth-child(2){
+  display: block;
+}
+.CyberpunkBTN:hover > span:nth-child(3){
+  display: block;
+}
+.CyberpunkBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.CyberpunkBTN span {
+  position: absolute;
+  display: block;
+}
+
+.CyberpunkBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.CyberpunkBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.CyberpunkBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.CyberpunkBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.CyberpunkBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar Back4blood*/
+.Back4blood{
+  color: #fff;
+}
+.Back4blood h4{
+  letter-spacing: 1px;
+}
+.Back4blood h1{
+  letter-spacing: 2px;
+}
+.Back4blood button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Back-4-Blood_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Back4blood button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.Back4bloodBTN:hover > span:nth-child(1){
+  display: block;
+}
+.Back4bloodBTN:hover > span:nth-child(2){
+  display: block;
+}
+.Back4bloodBTN:hover > span:nth-child(3){
+  display: block;
+}
+.Back4bloodBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.Back4bloodBTN span {
+  position: absolute;
+  display: block;
+}
+
+.Back4bloodBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.Back4bloodBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.Back4bloodBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.Back4bloodBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.Back4bloodBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar City*/
+.City{
+  color: #fff;
+}
+.City h4{
+  letter-spacing: 1px;
+}
+.City h1{
+  letter-spacing: 2px;
+}
+.City button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Knockout-City_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.City button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.CityBTN:hover > span:nth-child(1){
+  display: block;
+}
+.CityBTN:hover > span:nth-child(2){
+  display: block;
+}
+.CityBTN:hover > span:nth-child(3){
+  display: block;
+}
+.CityBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.CityBTN span {
+  position: absolute;
+  display: block;
+}
+
+.CityBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.CityBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.CityBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.CityBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.CityBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar City*/
+.NewWorld{
+  color: #fff;
+}
+.NewWorld h4{
+  letter-spacing: 1px;
+}
+.NewWorld h1{
+  letter-spacing: 2px;
+}
+.NewWorld button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_New-World_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.NewWorld button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.NewWorldBTN:hover > span:nth-child(1){
+  display: block;
+}
+.NewWorldBTN:hover > span:nth-child(2){
+  display: block;
+}
+.NewWorldBTN:hover > span:nth-child(3){
+  display: block;
+}
+.NewWorldBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.NewWorldBTN span {
+  position: absolute;
+  display: block;
+}
+
+.NewWorldBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.NewWorldBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.NewWorldBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.NewWorldBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.NewWorldBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+
+/*botão votar Valheim*/
+.Valheim{
+  color: #fff;
+}
+.Valheim h4{
+  letter-spacing: 1px;
+}
+.Valheim h1{
+  letter-spacing: 2px;
+}
+.Valheim button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Valheim_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Valheim button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.valheimBTN:hover > span:nth-child(1){
+  display: block;
+}
+.valheimBTN:hover > span:nth-child(2){
+  display: block;
+}
+.valheimBTN:hover > span:nth-child(3){
+  display: block;
+}
+.valheimBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.valheimBTN span {
+  position: absolute;
+  display: block;
+}
+
+.valheimBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.valheimBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.valheimBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.valheimBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.valheimBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar Valheim*/
+.Forza{
+  color: #fff;
+}
+.Forza h4{
+  letter-spacing: 1px;
+}
+.Forza h1{
+  letter-spacing: 2px;
+}
+.Forza button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_FORZA_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Forza button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.ForzaBTN:hover > span:nth-child(1){
+  display: block;
+}
+.ForzaBTN:hover > span:nth-child(2){
+  display: block;
+}
+.ForzaBTN:hover > span:nth-child(3){
+  display: block;
+}
+.ForzaBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.ForzaBTN span {
+  position: absolute;
+  display: block;
+}
+
+.ForzaBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.ForzaBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.ForzaBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.ForzaBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.ForzaBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+
+/*botão votar Nier*/
+.Nier{
+  color: #fff;
+}
+.Nier h4{
+  letter-spacing: 1px;
+}
+.Nier h1{
+  letter-spacing: 2px;
+}
+.Nier button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_NieR-Replicant_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Nier button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.NierBTN:hover > span:nth-child(1){
+  display: block;
+}
+.NierBTN:hover > span:nth-child(2){
+  display: block;
+}
+.NierBTN:hover > span:nth-child(3){
+  display: block;
+}
+.NierBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.NierBTN span {
+  position: absolute;
+  display: block;
+}
+
+.NierBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.NierBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.NierBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.NierBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.NierBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+
+/*botão votar Guardioes*/
+.Guardioes{
+  color: #fff;
+}
+.Guardioes h4{
+  letter-spacing: 1px;
+}
+.Guardioes h1{
+  letter-spacing: 2px;
+}
+.Guardioes button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Guardians-of-the-Galaxy_1080x1080.jpg );
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Guardioes button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.GuardioesBTN:hover > span:nth-child(1){
+  display: block;
+}
+.GuardioesBTN:hover > span:nth-child(2){
+  display: block;
+}
+.GuardioesBTN:hover > span:nth-child(3){
+  display: block;
+}
+.GuardioesBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.GuardioesBTN span {
+  position: absolute;
+  display: block;
+}
+
+.GuardioesBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.GuardioesBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.GuardioesBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.GuardioesBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.GuardioesBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar FarCry*/
+.FarCry{
+  color: #fff;
+}
+.FarCry h4{
+  letter-spacing: 1px;
+}
+.FarCry h1{
+  letter-spacing: 2px;
+}
+.FarCry button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Far-Cry-6_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.FarCry button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.FarCryBTN:hover > span:nth-child(1){
+  display: block;
+}
+.FarCryBTN:hover > span:nth-child(2){
+  display: block;
+}
+.FarCryBTN:hover > span:nth-child(3){
+  display: block;
+}
+.FarCryBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.FarCryBTN span {
+  position: absolute;
+  display: block;
+}
+
+.FarCryBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.FarCryBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.FarCryBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.FarCryBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.FarCryBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+
+/*botão votar minutes*/
+.minutes{
+  color: #fff;
+}
+.minutes h4{
+  letter-spacing: 1px;
+}
+.minutes h1{
+  letter-spacing: 2px;
+}
+.minutes button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_12-Minutes_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.minutes button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.minutesBTN:hover > span:nth-child(1){
+  display: block;
+}
+.minutesBTN:hover > span:nth-child(2){
+  display: block;
+}
+.minutesBTN:hover > span:nth-child(3){
+  display: block;
+}
+.minutesBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.minutesBTN span {
+  position: absolute;
+  display: block;
+}
+
+.minutesBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.minutesBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.minutesBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.minutesBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.minutesBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar DD*/
+.DD{
+  color: #fff;
+}
+.DD h4{
+  letter-spacing: 1px;
+}
+.DD h1{
+  letter-spacing: 2px;
+}
+.DD button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Deaths-Door_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.DD button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.DDBTN:hover > span:nth-child(1){
+  display: block;
+}
+.DDBTN:hover > span:nth-child(2){
+  display: block;
+}
+.DDBTN:hover > span:nth-child(3){
+  display: block;
+}
+.DDBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.DDBTN span {
+  position: absolute;
+  display: block;
+}
+
+.DDBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.DDBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.DDBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.DDBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.DDBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+
+/*botão votar Inscryption*/
+.Inscryption{
+  color: #fff;
+}
+.Inscryption h4{
+  letter-spacing: 1px;
+}
+.Inscryption h1{
+  letter-spacing: 2px;
+}
+.Inscryption button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Inscryption_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Inscryption button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.InscryptionBTN:hover > span:nth-child(1){
+  display: block;
+}
+.InscryptionBTN:hover > span:nth-child(2){
+  display: block;
+}
+.InscryptionBTN:hover > span:nth-child(3){
+  display: block;
+}
+.InscryptionBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.InscryptionBTN span {
+  position: absolute;
+  display: block;
+}
+
+.InscryptionBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.InscryptionBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.InscryptionBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.InscryptionBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.InscryptionBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*botão votar Kena*/
+.Kena{
+  color: #fff;
+}
+.Kena h4{
+  letter-spacing: 1px;
+}
+.Kena h1{
+  letter-spacing: 2px;
+}
+.Kena button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_KENA_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Kena button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.KenaBTN:hover > span:nth-child(1){
+  display: block;
+}
+.KenaBTN:hover > span:nth-child(2){
+  display: block;
+}
+.KenaBTN:hover > span:nth-child(3){
+  display: block;
+}
+.KenaBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.KenaBTN span {
+  position: absolute;
+  display: block;
+}
+
+.KenaBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.KenaBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.KenaBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.KenaBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.KenaBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+
+/*botão votar Loop*/
+.Loop{
+  color: #fff;
+}
+.Loop h4{
+  letter-spacing: 1px;
+}
+.Loop h1{
+  letter-spacing: 2px;
+}
+.Loop button{
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Loop-Hero_1080x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+  
+.Loop button:hover{
+  transform: scale(1.01);
+  color: #03e9f4;
+}
+.LoopBTN:hover > span:nth-child(1){
+  display: block;
+}
+.LoopBTN:hover > span:nth-child(2){
+  display: block;
+}
+.LoopBTN:hover > span:nth-child(3){
+  display: block;
+}
+.LoopBTN:hover > span:nth-child(4){
+  display: block;
+}
+
+.LoopBTN span {
+  position: absolute;
+  display: block;
+}
+
+.LoopBTN span:nth-child(1) {
+  display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.LoopBTN span:nth-child(2) {
+  display: none;
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.LoopBTN span:nth-child(3) {
+  display: none;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.LoopBTN span:nth-child(4) {
+  display: none;
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.LoopBTN span:nth-child(5){
+  margin-top: 105px;
+  margin-left: 90px;
+}
+/*VOTOS*/
 
 
 

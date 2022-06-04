@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Prêmio K-21 || K- 21</title>
 </head>
+
 <body>
     <!--Header-->
     <header>
@@ -37,9 +38,9 @@
                 <h1>Jogo do ano</h1><span>Reconhecendo um jogo que oferece a melhor experiência absoluta em todos os
                     campos criativos e técnicos.</span>
             </div>
-            <div class="votosVTM">
+            <div class="votosVTM22">
                 <div class="FFXIV">
-                    <button class="FFXIVBTN">
+                    <button onclick="addvotoJDAFF()" id="JDAFF" value="1" class="FFXIVBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -50,7 +51,7 @@
                     <h4>Square enix</h4>
                 </div>
                 <div class="ItTakesTwo">
-                    <button class="ItTakesTwoBTN">
+                    <button onclick="addvotoJDAT2()" id="JDAT2" value="2" class="ItTakesTwoBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -61,7 +62,7 @@
                     <h4>EA</h4>
                 </div>
                 <div class="Metroid">
-                    <button class="MetroidBTN">
+                    <button onclick="addvotoJDAME()" id="JDAME" value="3" class="MetroidBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -72,7 +73,7 @@
                     <h4>Nintendo</h4>
                 </div>
                 <div class="Cyberpunk">
-                    <button class="CyberpunkBTN">
+                    <button onclick="addvotoJDAC77()" id="JDAC77" value="4" class="CyberpunkBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -83,7 +84,7 @@
                     <h4>CD PROJECT RED</h4>
                 </div>
                 <div class="Resident">
-                    <button class="ResidentBTN">
+                    <button onclick="addvotoJDARE()" id="JDARE" value="5" class="ResidentBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -95,13 +96,14 @@
                 </div>
             </div>
         </div>
-        <div class="conteinerVTM22">
-            <div class="tituloVTM">
-                <h1>Multplayer</h1><span>Excelente jogabilidade e design multijogador online, incluindo experiências cooperativas e multijogador massivas, independentemente do gênero ou plataforma do jogo.</span>
+        <div class="conteinerVTM222">
+            <div class="tituloVTM2">
+                <h1>Multiplayer</h1><span>Excelente jogabilidade e design multijogador online, incluindo experiências
+                    cooperativas e multijogador massivas, independentemente do gênero ou plataforma do jogo.</span>
             </div>
-            <div class="votosVTM">
+            <div class="votosVTM22">
                 <div class="Back4blood">
-                    <button class="Back4bloodBTN">
+                    <button onclick="addvotoMB4B()" id="MB4B" value="1" class="Back4bloodBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -112,7 +114,7 @@
                     <h4>WB Games</h4>
                 </div>
                 <div class="City">
-                    <button class="CityBTN">
+                    <button onclick="addvotoMCITY()" id="MCITY" value="2" class="CityBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -123,7 +125,7 @@
                     <h4>EA</h4>
                 </div>
                 <div class="NewWorld">
-                    <button class="NewWorldBTN">
+                    <button onclick="addvotoMNW()" id="MNW" value="3" class="NewWorldBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -134,7 +136,7 @@
                     <h4>Amazon Games</h4>
                 </div>
                 <div class="Valheim">
-                    <button class="valheimBTN">
+                    <button onclick="addvotoMV()" id="MV" value="4" class="valheimBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -145,7 +147,7 @@
                     <h4>Coffee Stain</h4>
                 </div>
                 <div class="FFXIV">
-                    <button class="FFXIVBTN">
+                    <button onclick="addvotoMFF()" id="MFF" value="5" class="FFXIVBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -157,13 +159,13 @@
                 </div>
             </div>
         </div>
-        <div class="conteinerVTM22">
-            <div class="tituloVTM">
-                <h1>Audio</h1><span>Música excelente, incluindo partitura, música original e/ou trilha sonora licenciada e o melhor design de áudio e som do jogo.</span>
+        <div class="conteinerVTM222">
+            <div class="tituloVTM2">
+                <h1>Audio</h1><span>Música excelente, incluindo partitura, música original trilha sonora e/ou melhor design de áudio e som.</span>
             </div>
-            <div class="votosVTM">
+            <div class="votosVTM22">
                 <div class="Deathloop">
-                    <button class="DeathloopBTN">
+                    <button onclick="addvotoADL()" id="ADL" value="1" class="DeathloopBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -174,7 +176,7 @@
                     <h4>Bethesda</h4>
                 </div>
                 <div class="Forza">
-                    <button class="ForzaBTN">
+                    <button onclick="addvotoAF()" id="AF" value="2" class="ForzaBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -185,7 +187,7 @@
                     <h4>XBOX ONE STUDIOS</h4>
                 </div>
                 <div class="Nier">
-                    <button class="NierBTN">
+                    <button onclick="addvotoAN()" id="AN" value="3" class="NierBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -196,18 +198,18 @@
                     <h4>Square Enix</h4>
                 </div>
                 <div class="Guardioes">
-                    <button class="GuardioesBTN">
+                    <button onclick="addvotoAG()" id="AG" value="4" class="GuardioesBTN">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         <span>VOTAR</span>
                     </button>
-                    <h1>Marvel's Guardians of the Galaxy</h1>
-                    <h4>SIE</h4>
+                    <h1>Marvel's Guardians <br> of the Galaxy</h1>
+                    <h4>Square enix</h4>
                 </div>
                 <div class="Ratchet">
-                    <button class="RatchetBTN">
+                    <button onclick="addvotoAR()" id="AR" value="5" class="RatchetBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -219,24 +221,25 @@
                 </div>
             </div>
         </div>
-        <div class="conteinerVTM22">
-            <div class="tituloVTM">
-                <h1>Acao/Aventura</h1><span>Para o melhor jogo de ação/aventura, combinando combate com travessia e resolução de quebra-cabeças.</span>
+        <div class="conteinerVTM222">
+            <div class="tituloVTM2">
+                <h1>Acao/Aventura</h1><span>Para o melhor jogo de ação/aventura, combinando combate com travessia e
+                    resolução de quebra-cabeças.</span>
             </div>
-            <div class="votosVTM">
+            <div class="votosVTM22">
                 <div class="Guardioes">
-                    <button class="GuardioesBTN">
+                    <button onclick="addvotoAAG()" id="AAG" value="1" class="GuardioesBTN">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         <span>VOTAR</span>
                     </button>
-                    <h1>Ratchet & Clank: <br> Rift apart</h1>
-                    <h4>SIE</h4>
+                    <h1>Marvel's Guardians <br> of the Galaxy</h1>
+                    <h4>Square enix</h4>
                 </div>
                 <div class="FarCry">
-                    <button class="FarCryBTN">
+                    <button onclick="addvotoAAFC()" id="AAFC" value="2" class="FarCryBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -247,7 +250,7 @@
                     <h4>Ubisoft</h4>
                 </div>
                 <div class="Metroid">
-                    <button class="MetroidBTN">
+                    <button onclick="addvotoAAM()" id="AAM" value="3"class="MetroidBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -258,7 +261,7 @@
                     <h4>Nintendo</h4>
                 </div>
                 <div class="Back4blood">
-                    <button class="Back4bloodBTN">
+                    <button onclick="addvotoAAB4B()" id="AAB4B" value="4" class="Back4bloodBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -269,7 +272,7 @@
                     <h4>WB Games</h4>
                 </div>
                 <div class="Resident">
-                    <button class="ResidentBTN">
+                    <button onclick="addvotoAARE()" id="AARE" value="5" class="ResidentBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -281,13 +284,14 @@
                 </div>
             </div>
         </div>
-        <div class="conteinerVTM22">
-            <div class="tituloVTM">
-                <h1>Indie</h1><span>Para realizações criativas e técnicas excepcionais em um jogo feito fora do sistema tradicional.</span>
+        <div class="conteinerVTM2223">
+            <div class="tituloVTM2">
+                <h1>Indie</h1><span>Para realizações criativas e técnicas excepcionais em um jogo feito fora do sistema
+                    tradicional.</span>
             </div>
-            <div class="votosVTM">
+            <div class="votosVTM223">
                 <div class="minutes">
-                    <button class="minutesBTN">
+                    <button onclick="addvotoIM()" id="IM" value="1" class="minutesBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -298,7 +302,7 @@
                     <h4>annapura</h4>
                 </div>
                 <div class="DD">
-                    <button class="DDBTN">
+                    <button onclick="addvotoIDD()" id="IDD" value="2" class="DDBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -309,7 +313,7 @@
                     <h4>Devolver Digital</h4>
                 </div>
                 <div class="Inscryption">
-                    <button class="InscryptionBTN">
+                    <button onclick="addvotoII()" id="II" value="3" class="InscryptionBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -320,18 +324,18 @@
                     <h4>Devolver</h4>
                 </div>
                 <div class="Kena">
-                    <button class="KenaBTN">
+                    <button onclick="addvotoIK()" id="IK" value="4" class="KenaBTN">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         <span>VOTAR</span>
                     </button>
-                    <h1>Kena: Bridge of spirits</h1>
+                    <h1>Kena: Bridge of <br> spirits</h1>
                     <h4>Ember Lab</h4>
                 </div>
                 <div class="Loop">
-                    <button class="LoopBTN">
+                    <button onclick="addvotoIL()" id="IL" value="5" class="LoopBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -344,6 +348,16 @@
             </div>
         </div>
     </div>
+    <div class="enviarVT">
+        <button onclick="cadastrarVotos()" class="enviarVTBTN">Enviar votos</button>
+    </div>
+    <!-- Modal -->
+    <div class="modal-containerALERTA" id="modal_containerALERTA">
+        <div class="modalALERTA">
+            <h1 id="msgALERTA"></h1>
+        </div>
+    </div>
+    <!-- FIM  Modal -->
     <!--FOOTER-->
     <footer>
         <script src="https://kit.fontawesome.com/1de2b6cbbf.js" crossorigin="anonymous"></script>
@@ -389,9 +403,185 @@
 
 </html>
 <script>
-    function aaa() {
-        if (pedra >= 2) {
-            arr.innerHTML = `aaa`
+
+    let vertorVotos = []
+    function addvotoJDAFF() {
+        const votoFF = Number(JDAFF.value)
+        vertorVotos.splice(0, 1, votoFF)
+    }
+    function addvotoJDAT2() {
+        const votoT2 = Number(JDAT2.value)
+        vertorVotos.splice(0, 1, votoT2)
+    }
+    function addvotoJDAME() {
+        const votoME = Number(JDAME.value)
+        vertorVotos.splice(0, 1, votoME)
+    }
+    function addvotoJDAC77() {
+        const votoC77 = Number(JDAC77.value)
+        vertorVotos.splice(0, 1, votoC77)
+    }
+    function addvotoJDARE() {
+        const votoRE = Number(JDARE.value)
+        vertorVotos.splice(0, 1, votoRE)
+    }
+    function addvotoMB4B() {
+        const votoB4B = Number(MB4B.value)
+        vertorVotos.splice(1, 1, votoB4B)
+    }
+    function addvotoMCITY() {
+        const votoCITY = Number(MCITY.value)
+        vertorVotos.splice(1, 1, votoCITY)
+    }
+    function addvotoMNW() {
+        const votoNW = Number(MNW.value)
+        vertorVotos.splice(1, 1, votoNW)
+    }
+    function addvotoMV() {
+        const votoV = Number(MV.value)
+        vertorVotos.splice(1, 1, votoV)
+    }
+    function addvotoMFF() {
+        const votoFF = Number(MFF.value)
+        vertorVotos.splice(1, 1, votoFF)
+    }
+    function addvotoADL() {
+        const votoDL = Number(ADL.value)
+        vertorVotos.splice(2, 1, votoDL)
+    }
+    function addvotoAF() {
+        const votoF = Number(AF.value)
+        vertorVotos.splice(2, 1, votoF)
+    }
+    function addvotoAN() {
+        const votoN = Number(AN.value)
+        vertorVotos.splice(2, 1, votoN)
+    }
+    function addvotoAG() {
+        const votoG = Number(AG.value)
+        vertorVotos.splice(2, 1, votoG)
+    }
+    function addvotoAR() {
+        const votoR = Number(AR.value)
+        vertorVotos.splice(2, 1, votoR)
+    }
+    function addvotoAAG() {
+        const votoG = Number(AAG.value)
+        vertorVotos.splice(3, 1, votoG)
+    }
+    function addvotoAAFC() {
+        const votoFC = Number(AAFC.value)
+        vertorVotos.splice(3, 1, votoFC)
+    }
+    function addvotoAAM() {
+        const votoM = Number(AAM.value)
+        vertorVotos.splice(3, 1, votoM)
+    }
+    function addvotoAAB4B() {
+        const votoB4B = Number(AAB4B.value)
+        vertorVotos.splice(3, 1, votoB4B)
+    }
+    function addvotoAARE() {
+        const votoRE = Number(AARE.value)
+        vertorVotos.splice(3, 1, votoRE)
+    }
+    function addvotoIM() {
+        const votoM = Number(IM.value)
+        vertorVotos.splice(4, 1, votoM)
+    }
+    function addvotoIDD() {
+        const votoDD = Number(IDD.value)
+        vertorVotos.splice(4, 1, votoDD)
+    }
+    function addvotoII() {
+        const votoI = Number(II.value)
+        vertorVotos.splice(4, 1, votoI)
+    }
+    function addvotoIK() {
+        const votoK = Number(IK.value)
+        vertorVotos.splice(4, 1, votoK)
+    }
+    function addvotoIL() {
+
+        const votoL = Number(IL.value)
+        vertorVotos.splice(4, 1, votoL)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // CADASTRAR VOTOS
+    function cadastrarVotos() {
+        msgALERTA.innerHTML = ``
+        const modal_containerALERTA = document.getElementById('modal_containerALERTA');
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+
+        if (vertorVotos.length != 5) {
+            msgALERTA.innerHTML = `Por favor vote em todas categorias`
+            modal_containerALERTA.classList.add('showALERTA');
+            modal_containerALERTA.addEventListener('click', () => {
+                modal_containerALERTA.classList.remove('showALERTA');
+            });
+
+            return;
         }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrarVotos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                JogoDoAnoServer: vertorVotos[0],
+                MultiplayerServer: vertorVotos[1],
+                AudioServer: vertorVotos[2],
+                AcaoAventuraServer: vertorVotos[3],
+                IndieServer: vertorVotos[4],
+                fkUsuarioServer: sessionStorage.ID_USUARIO
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                msgALERTA.innerHTML = `Votação realizada com sucesso`
+                modal_containerALERTA.classList.add('showCONFIR');
+                modal_containerALERTA.addEventListener('click', () => {
+                    modal_containerALERTA.classList.remove('showCONFIR');
+                });
+                setTimeout(() => {
+                    window.location = "alltime.html";
+                }, 1500)
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                msgALERTA.innerHTML = `Houve um erro na votação!`
+                modal_containerALERTA.classList.add('showALERTA');
+                modal_containerALERTA.addEventListener('click', () => {
+                    modal_containerALERTA.classList.remove('showALERTA');
+                });
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+
+        });
+
+        return false;
     }
 </script>

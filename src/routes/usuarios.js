@@ -23,5 +23,8 @@ router.post("/autenticar", function (req, res) {
 router.post("/verificar", function (req, res) {
     usuarioController.verificar(req, res);
 });
+router.post("/cadastrarVotos", function (req, res) {
+    usuarioController.cadastrarVotos(req, res);
+});
 
 module.exports = router;
