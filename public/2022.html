@@ -20,7 +20,7 @@
             <ul class="navbar">
                 <li><button class="btn_I" onclick="window.location.href='index.html'">Início</button></li>
                 <li><button class="btn_22X" onclick="window.location.href='2022.html'">Votação 2021</button></li>
-                <li><button class="btn_AT" onclick="window.location.href='alltime.html'">Resultados</button></li>
+                <li><button class="btn_AT" onclick="window.location.href='resultados.html'">Resultados</button></li>
                 <li><button class="btn_L" onclick="window.location.href='login.html'">Login</button></li>
             </ul>
             <div class="LL"><img class="img_L" src="https://i.imgur.com/jfzM7hF.png"></div>
@@ -31,7 +31,6 @@
         <header class="header22">
             <button class="categoriaANT22">Categoria anterior</button>
             <button class="categoriaPROX22">Proxima categoria &nbsp; <div class="setaD"></div></button>
-            <div class="contagemVOT"><b><span>0</span>/10</b></div>
         </header>
         <div class="conteinerVTM22">
             <div class="tituloVTM">
@@ -40,7 +39,7 @@
             </div>
             <div class="votosVTM22">
                 <div class="FFXIV">
-                    <button onclick="addvotoJDAFF()" id="JDAFF" value="1" class="FFXIVBTN">
+                    <button onclick="addvotoJDAFF()" id="JDAFF" value="FFXIV" class="FFXIVBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -51,7 +50,7 @@
                     <h4>Square enix</h4>
                 </div>
                 <div class="ItTakesTwo">
-                    <button onclick="addvotoJDAT2()" id="JDAT2" value="2" class="ItTakesTwoBTN">
+                    <button onclick="addvotoJDAT2()" id="JDAT2" value="It Takes Two" class="ItTakesTwoBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -62,7 +61,7 @@
                     <h4>EA</h4>
                 </div>
                 <div class="Metroid">
-                    <button onclick="addvotoJDAME()" id="JDAME" value="3" class="MetroidBTN">
+                    <button onclick="addvotoJDAME()" id="JDAME" value="Metroid Dread" class="MetroidBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -73,7 +72,7 @@
                     <h4>Nintendo</h4>
                 </div>
                 <div class="Cyberpunk">
-                    <button onclick="addvotoJDAC77()" id="JDAC77" value="4" class="CyberpunkBTN">
+                    <button onclick="addvotoJDAC77()" id="JDAC77" value="Cyberpunk 2077" class="CyberpunkBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -84,7 +83,7 @@
                     <h4>CD PROJECT RED</h4>
                 </div>
                 <div class="Resident">
-                    <button onclick="addvotoJDARE()" id="JDARE" value="5" class="ResidentBTN">
+                    <button onclick="addvotoJDARE()" id="JDARE" value="Resident Evil Village" class="ResidentBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -103,7 +102,7 @@
             </div>
             <div class="votosVTM22">
                 <div class="Back4blood">
-                    <button onclick="addvotoMB4B()" id="MB4B" value="1" class="Back4bloodBTN">
+                    <button onclick="addvotoMB4B()" id="MB4B" value="Back 4 Blood" class="Back4bloodBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -114,7 +113,7 @@
                     <h4>WB Games</h4>
                 </div>
                 <div class="City">
-                    <button onclick="addvotoMCITY()" id="MCITY" value="2" class="CityBTN">
+                    <button onclick="addvotoMCITY()" id="MCITY" value="Knockout City" class="CityBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -125,7 +124,7 @@
                     <h4>EA</h4>
                 </div>
                 <div class="NewWorld">
-                    <button onclick="addvotoMNW()" id="MNW" value="3" class="NewWorldBTN">
+                    <button onclick="addvotoMNW()" id="MNW" value="New World" class="NewWorldBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -136,7 +135,7 @@
                     <h4>Amazon Games</h4>
                 </div>
                 <div class="Valheim">
-                    <button onclick="addvotoMV()" id="MV" value="4" class="valheimBTN">
+                    <button onclick="addvotoMV()" id="MV" value="Valheim" class="valheimBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -147,7 +146,7 @@
                     <h4>Coffee Stain</h4>
                 </div>
                 <div class="FFXIV">
-                    <button onclick="addvotoMFF()" id="MFF" value="5" class="FFXIVBTN">
+                    <button onclick="addvotoMFF()" id="MFF" value="FFXIV" class="FFXIVBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -165,7 +164,7 @@
             </div>
             <div class="votosVTM22">
                 <div class="Deathloop">
-                    <button onclick="addvotoADL()" id="ADL" value="1" class="DeathloopBTN">
+                    <button onclick="addvotoADL()" id="ADL" value="Deathloop" class="DeathloopBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -176,7 +175,7 @@
                     <h4>Bethesda</h4>
                 </div>
                 <div class="Forza">
-                    <button onclick="addvotoAF()" id="AF" value="2" class="ForzaBTN">
+                    <button onclick="addvotoAF()" id="AF" value="Forza Horizon 5" class="ForzaBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -187,7 +186,7 @@
                     <h4>XBOX ONE STUDIOS</h4>
                 </div>
                 <div class="Nier">
-                    <button onclick="addvotoAN()" id="AN" value="3" class="NierBTN">
+                    <button onclick="addvotoAN()" id="AN" value="Nier Replicant ver.1.22474487139" class="NierBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -198,7 +197,7 @@
                     <h4>Square Enix</h4>
                 </div>
                 <div class="Guardioes">
-                    <button onclick="addvotoAG()" id="AG" value="4" class="GuardioesBTN">
+                    <button onclick="addvotoAG()" id="AG" value="Marvel Guardians of the Galaxy" class="GuardioesBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -209,7 +208,7 @@
                     <h4>Square enix</h4>
                 </div>
                 <div class="Ratchet">
-                    <button onclick="addvotoAR()" id="AR" value="5" class="RatchetBTN">
+                    <button onclick="addvotoAR()" id="AR" value="Ratchet & Clank: Rift Apart" class="RatchetBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -228,7 +227,7 @@
             </div>
             <div class="votosVTM22">
                 <div class="Guardioes">
-                    <button onclick="addvotoAAG()" id="AAG" value="1" class="GuardioesBTN">
+                    <button onclick="addvotoAAG()" id="AAG" value="Marvel Guardians of the Galaxy" class="GuardioesBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -239,7 +238,7 @@
                     <h4>Square enix</h4>
                 </div>
                 <div class="FarCry">
-                    <button onclick="addvotoAAFC()" id="AAFC" value="2" class="FarCryBTN">
+                    <button onclick="addvotoAAFC()" id="AAFC" value="FarCry 6" class="FarCryBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -261,7 +260,7 @@
                     <h4>Nintendo</h4>
                 </div>
                 <div class="Back4blood">
-                    <button onclick="addvotoAAB4B()" id="AAB4B" value="4" class="Back4bloodBTN">
+                    <button onclick="addvotoAAB4B()" id="AAB4B" value="Metroid Dread" class="Back4bloodBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -272,7 +271,7 @@
                     <h4>WB Games</h4>
                 </div>
                 <div class="Resident">
-                    <button onclick="addvotoAARE()" id="AARE" value="5" class="ResidentBTN">
+                    <button onclick="addvotoAARE()" id="AARE" value="Resident Evil Village" class="ResidentBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -291,7 +290,7 @@
             </div>
             <div class="votosVTM223">
                 <div class="minutes">
-                    <button onclick="addvotoIM()" id="IM" value="1" class="minutesBTN">
+                    <button onclick="addvotoIM()" id="IM" value="12 minutes" class="minutesBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -302,7 +301,7 @@
                     <h4>annapura</h4>
                 </div>
                 <div class="DD">
-                    <button onclick="addvotoIDD()" id="IDD" value="2" class="DDBTN">
+                    <button onclick="addvotoIDD()" id="IDD" value="Deaths Door" class="DDBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -313,7 +312,7 @@
                     <h4>Devolver Digital</h4>
                 </div>
                 <div class="Inscryption">
-                    <button onclick="addvotoII()" id="II" value="3" class="InscryptionBTN">
+                    <button onclick="addvotoII()" id="II" value="Inscryption" class="InscryptionBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -324,7 +323,7 @@
                     <h4>Devolver</h4>
                 </div>
                 <div class="Kena">
-                    <button onclick="addvotoIK()" id="IK" value="4" class="KenaBTN">
+                    <button onclick="addvotoIK()" id="IK" value="Kena: Bridge of spirits" class="KenaBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -335,7 +334,7 @@
                     <h4>Ember Lab</h4>
                 </div>
                 <div class="Loop">
-                    <button onclick="addvotoIL()" id="IL" value="5" class="LoopBTN">
+                    <button onclick="addvotoIL()" id="IL" value="Loop Hero" class="LoopBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -406,104 +405,104 @@
 
     let vertorVotos = []
     function addvotoJDAFF() {
-        const votoFF = Number(JDAFF.value)
+        const votoFF = JDAFF.value
         vertorVotos.splice(0, 1, votoFF)
     }
     function addvotoJDAT2() {
-        const votoT2 = Number(JDAT2.value)
+        const votoT2 = JDAT2.value
         vertorVotos.splice(0, 1, votoT2)
     }
     function addvotoJDAME() {
-        const votoME = Number(JDAME.value)
+        const votoME = JDAME.value
         vertorVotos.splice(0, 1, votoME)
     }
     function addvotoJDAC77() {
-        const votoC77 = Number(JDAC77.value)
+        const votoC77 = JDAC77.value
         vertorVotos.splice(0, 1, votoC77)
     }
     function addvotoJDARE() {
-        const votoRE = Number(JDARE.value)
+        const votoRE = JDARE.value
         vertorVotos.splice(0, 1, votoRE)
     }
     function addvotoMB4B() {
-        const votoB4B = Number(MB4B.value)
+        const votoB4B = MB4B.value
         vertorVotos.splice(1, 1, votoB4B)
     }
     function addvotoMCITY() {
-        const votoCITY = Number(MCITY.value)
+        const votoCITY = MCITY.value
         vertorVotos.splice(1, 1, votoCITY)
     }
     function addvotoMNW() {
-        const votoNW = Number(MNW.value)
+        const votoNW = MNW.value
         vertorVotos.splice(1, 1, votoNW)
     }
     function addvotoMV() {
-        const votoV = Number(MV.value)
+        const votoV = MV.value
         vertorVotos.splice(1, 1, votoV)
     }
     function addvotoMFF() {
-        const votoFF = Number(MFF.value)
+        const votoFF = MFF.value
         vertorVotos.splice(1, 1, votoFF)
     }
     function addvotoADL() {
-        const votoDL = Number(ADL.value)
+        const votoDL = ADL.value
         vertorVotos.splice(2, 1, votoDL)
     }
     function addvotoAF() {
-        const votoF = Number(AF.value)
+        const votoF = AF.value
         vertorVotos.splice(2, 1, votoF)
     }
     function addvotoAN() {
-        const votoN = Number(AN.value)
+        const votoN = AN.value
         vertorVotos.splice(2, 1, votoN)
     }
     function addvotoAG() {
-        const votoG = Number(AG.value)
+        const votoG = AG.value
         vertorVotos.splice(2, 1, votoG)
     }
     function addvotoAR() {
-        const votoR = Number(AR.value)
+        const votoR = AR.value
         vertorVotos.splice(2, 1, votoR)
     }
     function addvotoAAG() {
-        const votoG = Number(AAG.value)
+        const votoG = AAG.value
         vertorVotos.splice(3, 1, votoG)
     }
     function addvotoAAFC() {
-        const votoFC = Number(AAFC.value)
+        const votoFC = AAFC.value
         vertorVotos.splice(3, 1, votoFC)
     }
     function addvotoAAM() {
-        const votoM = Number(AAM.value)
+        const votoM = AAM.value
         vertorVotos.splice(3, 1, votoM)
     }
     function addvotoAAB4B() {
-        const votoB4B = Number(AAB4B.value)
+        const votoB4B = AAB4B.value
         vertorVotos.splice(3, 1, votoB4B)
     }
     function addvotoAARE() {
-        const votoRE = Number(AARE.value)
+        const votoRE = AARE.value
         vertorVotos.splice(3, 1, votoRE)
     }
     function addvotoIM() {
-        const votoM = Number(IM.value)
+        const votoM = IM.value
         vertorVotos.splice(4, 1, votoM)
     }
     function addvotoIDD() {
-        const votoDD = Number(IDD.value)
+        const votoDD = IDD.value
         vertorVotos.splice(4, 1, votoDD)
     }
     function addvotoII() {
-        const votoI = Number(II.value)
+        const votoI = II.value
         vertorVotos.splice(4, 1, votoI)
     }
     function addvotoIK() {
-        const votoK = Number(IK.value)
+        const votoK = IK.value
         vertorVotos.splice(4, 1, votoK)
     }
     function addvotoIL() {
 
-        const votoL = Number(IL.value)
+        const votoL = IL.value
         vertorVotos.splice(4, 1, votoL)
     }
     
@@ -564,7 +563,7 @@
                     modal_containerALERTA.classList.remove('showCONFIR');
                 });
                 setTimeout(() => {
-                    window.location = "alltime.html";
+                    window.location = "resultados.html";
                 }, 1500)
 
                 limparFormulario();

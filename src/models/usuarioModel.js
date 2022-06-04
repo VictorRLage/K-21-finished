@@ -39,7 +39,7 @@ function cadastrarVotos(JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, fkUs
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, fkUsuario);
     
     var instrucao = `
-        INSERT INTO votacao (JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, fkUsuario) VALUES (${JogoDoAno}, ${Multiplayer}, ${Audio}, ${AcaoAventura}, ${Indie}, ${fkUsuario});
+        INSERT INTO votacao (JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, fkUsuario) VALUES ('${JogoDoAno}', '${Multiplayer}', '${Audio}', '${AcaoAventura}', '${Indie}', ${fkUsuario});
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
