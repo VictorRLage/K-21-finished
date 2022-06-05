@@ -35,11 +35,11 @@ function cadastrar(nome, email, senha, nomeU) {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
-function cadastrarVotos(JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, fkUsuario) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, fkUsuario);
+function cadastrarVotos(JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, id) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, id);
     
     var instrucao = `
-        INSERT INTO votacao (JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, fkUsuario) VALUES ('${JogoDoAno}', '${Multiplayer}', '${Audio}', '${AcaoAventura}', '${Indie}', ${fkUsuario});
+    update usuario set fkJogoDoAno = ${JogoDoAno}, fkMultiplayer = ${Multiplayer}, fkAudio = ${Audio}, fkAcaoAventura = ${AcaoAventura}, fkIndie = ${Indie} where id = ${id};;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

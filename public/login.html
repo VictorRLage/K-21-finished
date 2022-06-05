@@ -77,7 +77,7 @@
             <div class="footerEsquerda">
                 <div class="logoFF">
                     <img class="chaveFE" src="https://i.imgur.com/yqyyC1j.png">
-                    <img class="logoF" src="https://i.imgur.com/CujXbZW.png">
+                    <img class="logoF" src="https://i.imgur.com/mtqP8Hy.png">
                     <img class="chaveFD" src="https://i.imgur.com/QDPc2ez.png">
                 </div>
                 <ul class="sociais">
@@ -107,7 +107,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2022 Prêmio K-22</p>
+            <p>&copy; 2022 Projeto K-21</p>
         </div>
     </footer>
     <!--FIM FOOTER-->
@@ -154,6 +154,8 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {

@@ -9,7 +9,7 @@
     <title>Prêmio K-21 || K- 21</title>
 </head>
 
-<body>
+<body onload="validarSessao()">
     <!--Header-->
     <header>
         <div class="containerH">
@@ -28,9 +28,11 @@
     </header>
     <!--Fim Header-->
     <div class="votacao22">
-        <header class="header22">
-            <button class="categoriaANT22">Categoria anterior</button>
-            <button class="categoriaPROX22">Proxima categoria &nbsp; <div class="setaD"></div></button>
+        <header id="header22" class="header22">
+            <button onclick="ant()" class="categoriaANT22">
+                <div class="setaE"></div> &nbsp; Categoria anterior
+            </button>
+            <button onclick="prox()" class="categoriaPROX22">Proxima categoria &nbsp; <div class="setaD"></div></button>
         </header>
         <div class="conteinerVTM22">
             <div class="tituloVTM">
@@ -39,7 +41,7 @@
             </div>
             <div class="votosVTM22">
                 <div class="FFXIV">
-                    <button onclick="addvotoJDAFF()" id="JDAFF" value="FFXIV" class="FFXIVBTN">
+                    <button onclick="addvotoJDAFF()" id="JDAFF" value="1001" class="FFXIVBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -50,7 +52,7 @@
                     <h4>Square enix</h4>
                 </div>
                 <div class="ItTakesTwo">
-                    <button onclick="addvotoJDAT2()" id="JDAT2" value="It Takes Two" class="ItTakesTwoBTN">
+                    <button onclick="addvotoJDAT2()" id="JDAT2" value="1002" class="ItTakesTwoBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -61,7 +63,7 @@
                     <h4>EA</h4>
                 </div>
                 <div class="Metroid">
-                    <button onclick="addvotoJDAME()" id="JDAME" value="Metroid Dread" class="MetroidBTN">
+                    <button onclick="addvotoJDAME()" id="JDAME" value="1003" class="MetroidBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -72,7 +74,7 @@
                     <h4>Nintendo</h4>
                 </div>
                 <div class="Cyberpunk">
-                    <button onclick="addvotoJDAC77()" id="JDAC77" value="Cyberpunk 2077" class="CyberpunkBTN">
+                    <button onclick="addvotoJDAC77()" id="JDAC77" value="1004" class="CyberpunkBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -83,7 +85,7 @@
                     <h4>CD PROJECT RED</h4>
                 </div>
                 <div class="Resident">
-                    <button onclick="addvotoJDARE()" id="JDARE" value="Resident Evil Village" class="ResidentBTN">
+                    <button onclick="addvotoJDARE()" id="JDARE" value="1005" class="ResidentBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -102,7 +104,7 @@
             </div>
             <div class="votosVTM22">
                 <div class="Back4blood">
-                    <button onclick="addvotoMB4B()" id="MB4B" value="Back 4 Blood" class="Back4bloodBTN">
+                    <button onclick="addvotoMB4B()" id="MB4B" value="2001" class="Back4bloodBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -113,7 +115,7 @@
                     <h4>WB Games</h4>
                 </div>
                 <div class="City">
-                    <button onclick="addvotoMCITY()" id="MCITY" value="Knockout City" class="CityBTN">
+                    <button onclick="addvotoMCITY()" id="MCITY" value="2002" class="CityBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -124,7 +126,7 @@
                     <h4>EA</h4>
                 </div>
                 <div class="NewWorld">
-                    <button onclick="addvotoMNW()" id="MNW" value="New World" class="NewWorldBTN">
+                    <button onclick="addvotoMNW()" id="MNW" value="2003" class="NewWorldBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -135,7 +137,7 @@
                     <h4>Amazon Games</h4>
                 </div>
                 <div class="Valheim">
-                    <button onclick="addvotoMV()" id="MV" value="Valheim" class="valheimBTN">
+                    <button onclick="addvotoMV()" id="MV" value="2004" class="valheimBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -146,7 +148,7 @@
                     <h4>Coffee Stain</h4>
                 </div>
                 <div class="FFXIV">
-                    <button onclick="addvotoMFF()" id="MFF" value="FFXIV" class="FFXIVBTN">
+                    <button onclick="addvotoMFF()" id="MFF" value="2005" class="FFXIVBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -160,11 +162,12 @@
         </div>
         <div class="conteinerVTM222">
             <div class="tituloVTM2">
-                <h1>Audio</h1><span>Música excelente, incluindo partitura, música original trilha sonora e/ou melhor design de áudio e som.</span>
+                <h1>Audio</h1><span>Música excelente, incluindo partitura, música original trilha sonora e/ou melhor
+                    design de áudio e som.</span>
             </div>
             <div class="votosVTM22">
                 <div class="Deathloop">
-                    <button onclick="addvotoADL()" id="ADL" value="Deathloop" class="DeathloopBTN">
+                    <button onclick="addvotoADL()" id="ADL" value="3001" class="DeathloopBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -175,7 +178,7 @@
                     <h4>Bethesda</h4>
                 </div>
                 <div class="Forza">
-                    <button onclick="addvotoAF()" id="AF" value="Forza Horizon 5" class="ForzaBTN">
+                    <button onclick="addvotoAF()" id="AF" value="3002" class="ForzaBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -186,7 +189,7 @@
                     <h4>XBOX ONE STUDIOS</h4>
                 </div>
                 <div class="Nier">
-                    <button onclick="addvotoAN()" id="AN" value="Nier Replicant ver.1.22474487139" class="NierBTN">
+                    <button onclick="addvotoAN()" id="AN" value="3003" class="NierBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -197,7 +200,7 @@
                     <h4>Square Enix</h4>
                 </div>
                 <div class="Guardioes">
-                    <button onclick="addvotoAG()" id="AG" value="Marvel Guardians of the Galaxy" class="GuardioesBTN">
+                    <button onclick="addvotoAG()" id="AG" value="3004" class="GuardioesBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -208,7 +211,7 @@
                     <h4>Square enix</h4>
                 </div>
                 <div class="Ratchet">
-                    <button onclick="addvotoAR()" id="AR" value="Ratchet & Clank: Rift Apart" class="RatchetBTN">
+                    <button onclick="addvotoAR()" id="AR" value="3005" class="RatchetBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -227,7 +230,7 @@
             </div>
             <div class="votosVTM22">
                 <div class="Guardioes">
-                    <button onclick="addvotoAAG()" id="AAG" value="Marvel Guardians of the Galaxy" class="GuardioesBTN">
+                    <button onclick="addvotoAAG()" id="AAG" value="4001" class="GuardioesBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -238,7 +241,7 @@
                     <h4>Square enix</h4>
                 </div>
                 <div class="FarCry">
-                    <button onclick="addvotoAAFC()" id="AAFC" value="FarCry 6" class="FarCryBTN">
+                    <button onclick="addvotoAAFC()" id="AAFC" value="4002" class="FarCryBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -249,7 +252,7 @@
                     <h4>Ubisoft</h4>
                 </div>
                 <div class="Metroid">
-                    <button onclick="addvotoAAM()" id="AAM" value="3"class="MetroidBTN">
+                    <button onclick="addvotoAAM()" id="AAM" value="4003" class="MetroidBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -260,7 +263,7 @@
                     <h4>Nintendo</h4>
                 </div>
                 <div class="Back4blood">
-                    <button onclick="addvotoAAB4B()" id="AAB4B" value="Metroid Dread" class="Back4bloodBTN">
+                    <button onclick="addvotoAAB4B()" id="AAB4B" value="4004" class="Back4bloodBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -271,7 +274,7 @@
                     <h4>WB Games</h4>
                 </div>
                 <div class="Resident">
-                    <button onclick="addvotoAARE()" id="AARE" value="Resident Evil Village" class="ResidentBTN">
+                    <button onclick="addvotoAARE()" id="AARE" value="4005" class="ResidentBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -290,7 +293,7 @@
             </div>
             <div class="votosVTM223">
                 <div class="minutes">
-                    <button onclick="addvotoIM()" id="IM" value="12 minutes" class="minutesBTN">
+                    <button onclick="addvotoIM()" id="IM" value="5001" class="minutesBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -301,7 +304,7 @@
                     <h4>annapura</h4>
                 </div>
                 <div class="DD">
-                    <button onclick="addvotoIDD()" id="IDD" value="Deaths Door" class="DDBTN">
+                    <button onclick="addvotoIDD()" id="IDD" value="5002" class="DDBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -312,7 +315,7 @@
                     <h4>Devolver Digital</h4>
                 </div>
                 <div class="Inscryption">
-                    <button onclick="addvotoII()" id="II" value="Inscryption" class="InscryptionBTN">
+                    <button onclick="addvotoII()" id="II" value="5003" class="InscryptionBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -323,7 +326,7 @@
                     <h4>Devolver</h4>
                 </div>
                 <div class="Kena">
-                    <button onclick="addvotoIK()" id="IK" value="Kena: Bridge of spirits" class="KenaBTN">
+                    <button onclick="addvotoIK()" id="IK" value="5004" class="KenaBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -334,7 +337,7 @@
                     <h4>Ember Lab</h4>
                 </div>
                 <div class="Loop">
-                    <button onclick="addvotoIL()" id="IL" value="Loop Hero" class="LoopBTN">
+                    <button onclick="addvotoIL()" id="IL" value="5005" class="LoopBTN">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -357,6 +360,14 @@
         </div>
     </div>
     <!-- FIM  Modal -->
+    <!-- Modal2 -->
+    <div class="modal-containerSess" id="modal_containerSess">
+        <div class="modalSess">
+            <h1 id="msgSess">Por favor cadastre-se no nosso site para participar da votação</h1>
+            <button class="SessBTN" onclick="cadas()">Cadastre-se</button>
+        </div>
+    </div>
+    <!-- FIM MODAL -->
     <!--FOOTER-->
     <footer>
         <script src="https://kit.fontawesome.com/1de2b6cbbf.js" crossorigin="anonymous"></script>
@@ -364,7 +375,7 @@
             <div class="footerEsquerda">
                 <div class="logoFF">
                     <img class="chaveFE" src="https://i.imgur.com/yqyyC1j.png">
-                    <img class="logoF" src="https://i.imgur.com/CujXbZW.png">
+                    <img class="logoF" src="https://i.imgur.com/mtqP8Hy.png">
                     <img class="chaveFD" src="https://i.imgur.com/QDPc2ez.png">
                 </div>
                 <ul class="sociais">
@@ -394,7 +405,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2022 Prêmio K-22</p>
+            <p>&copy; 2022 Projeto K-21</p>
         </div>
     </footer>
     <!--FIM FOOTER-->
@@ -402,123 +413,295 @@
 
 </html>
 <script>
+    function ant() {
+        window.scrollBy(0, -700);
+    }
+    function prox() {
+        window.scrollBy(0, 700);
+    }
+    window.onscroll = function () { myFunction() };
 
+    var header = document.getElementById("header22");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+</script>
+<script>
+    const JDAFF = document.getElementById('JDAFF')
+    const JDAT2 = document.getElementById('JDAT2')
+    const JDAME = document.getElementById('JDAME')
+    const JDAC77 = document.getElementById('JDAC77')
+    const JDARE = document.getElementById('JDARE')
     let vertorVotos = []
     function addvotoJDAFF() {
+        JDAFF.classList.add('showFF');
+        JDARE.classList.remove('showRE');
+        JDAT2.classList.remove('showT2');
+        JDAME.classList.remove('showME');
+        JDAC77.classList.remove('showC77');
         const votoFF = JDAFF.value
         vertorVotos.splice(0, 1, votoFF)
     }
     function addvotoJDAT2() {
+        JDAT2.classList.add('showT2');
+        JDARE.classList.remove('showRE');
+        JDAME.classList.remove('showME');
+        JDAFF.classList.remove('showFF');
+        JDAC77.classList.remove('showC77');
         const votoT2 = JDAT2.value
         vertorVotos.splice(0, 1, votoT2)
     }
     function addvotoJDAME() {
+        JDAME.classList.add('showME');
+        JDARE.classList.remove('showRE');
+        JDAT2.classList.remove('showT2');
+        JDAFF.classList.remove('showFF');
+        JDAC77.classList.remove('showC77');
         const votoME = JDAME.value
         vertorVotos.splice(0, 1, votoME)
     }
     function addvotoJDAC77() {
+        JDAC77.classList.add('showC77');
+        JDARE.classList.remove('showRE');
+        JDAT2.classList.remove('showT2');
+        JDAME.classList.remove('showME');
+        JDAFF.classList.remove('showFF');
         const votoC77 = JDAC77.value
         vertorVotos.splice(0, 1, votoC77)
     }
     function addvotoJDARE() {
+        JDARE.classList.add('showRE');
+        JDAT2.classList.remove('showT2');
+        JDAME.classList.remove('showME');
+        JDAFF.classList.remove('showFF');
+        JDAC77.classList.remove('showC77');
         const votoRE = JDARE.value
         vertorVotos.splice(0, 1, votoRE)
     }
+    // -----------------------------------------------------------------------------------------------------------------------------
+    const MB4B = document.getElementById('MB4B')
+    const MCITY = document.getElementById('MCITY')
+    const MNW = document.getElementById('MNW')
+    const MV = document.getElementById('MV')
+    const MFF = document.getElementById('MFF')
     function addvotoMB4B() {
+        MB4B.classList.add('showB4B');
+        MCITY.classList.remove('showKC');
+        MNW.classList.remove('showNW');
+        MV.classList.remove('showV');
+        MFF.classList.remove('showFF');
         const votoB4B = MB4B.value
         vertorVotos.splice(1, 1, votoB4B)
     }
     function addvotoMCITY() {
+        MCITY.classList.add('showKC');
+        MB4B.classList.remove('showB4B');
+        MNW.classList.remove('showNW');
+        MV.classList.remove('showV');
+        MFF.classList.remove('showFF');
         const votoCITY = MCITY.value
         vertorVotos.splice(1, 1, votoCITY)
     }
     function addvotoMNW() {
+        MNW.classList.add('showNW');
+        MCITY.classList.remove('showKC');
+        MB4B.classList.remove('showB4B');
+        MV.classList.remove('showV');
+        MFF.classList.remove('showFF');
         const votoNW = MNW.value
         vertorVotos.splice(1, 1, votoNW)
     }
     function addvotoMV() {
+        MV.classList.add('showV');
+        MCITY.classList.remove('showKC');
+        MB4B.classList.remove('showB4B');
+        MNW.classList.remove('showNW');
+        MFF.classList.remove('showFF');
         const votoV = MV.value
         vertorVotos.splice(1, 1, votoV)
     }
     function addvotoMFF() {
+        MFF.classList.add('showFF');
+        MCITY.classList.remove('showKC');
+        MB4B.classList.remove('showB4B');
+        MNW.classList.remove('showNW');
+        MV.classList.remove('showV');
         const votoFF = MFF.value
         vertorVotos.splice(1, 1, votoFF)
     }
+    // -----------------------------------------------------------------------------------------------------------------------------
+    const ADL = document.getElementById('ADL')
+    const AF = document.getElementById('AF')
+    const AN = document.getElementById('AN')
+    const AG = document.getElementById('AG')
+    const AR = document.getElementById('AR')
     function addvotoADL() {
+        ADL.classList.add('showDL');
+        AF.classList.remove('showF5');
+        AN.classList.remove('showN');
+        AG.classList.remove('showG');
+        AR.classList.remove('showRC');
         const votoDL = ADL.value
         vertorVotos.splice(2, 1, votoDL)
     }
     function addvotoAF() {
+        ADL.classList.remove('showDL');
+        AF.classList.add('showF5');
+        AN.classList.remove('showN');
+        AG.classList.remove('showG');
+        AR.classList.remove('showRC');
         const votoF = AF.value
         vertorVotos.splice(2, 1, votoF)
     }
     function addvotoAN() {
+        ADL.classList.remove('showDL');
+        AF.classList.remove('showF5');
+        AN.classList.add('showN');
+        AG.classList.remove('showG');
+        AR.classList.remove('showRC');
         const votoN = AN.value
         vertorVotos.splice(2, 1, votoN)
     }
     function addvotoAG() {
+        ADL.classList.remove('showDL');
+        AF.classList.remove('showF5');
+        AN.classList.remove('showN');
+        AG.classList.add('showG');
+        AR.classList.remove('showRC');
         const votoG = AG.value
         vertorVotos.splice(2, 1, votoG)
     }
     function addvotoAR() {
+        ADL.classList.remove('showDL');
+        AF.classList.remove('showF5');
+        AN.classList.remove('showN');
+        AG.classList.remove('showG');
+        AR.classList.add('showRC');
         const votoR = AR.value
         vertorVotos.splice(2, 1, votoR)
     }
+    // -----------------------------------------------------------------------------------------------------------------------------
+    const AAG = document.getElementById('AAG')
+    const AAFC = document.getElementById('AAFC')
+    const AAM = document.getElementById('AAM')
+    const AAB4B = document.getElementById('AAB4B')
+    const AARE = document.getElementById('AARE')
     function addvotoAAG() {
+        AAG.classList.add('showG');
+        AAFC.classList.remove('showF6');
+        AAM.classList.remove('showME');
+        AAB4B.classList.remove('showB4B');
+        AARE.classList.remove('showRE');
         const votoG = AAG.value
         vertorVotos.splice(3, 1, votoG)
     }
     function addvotoAAFC() {
+        AAG.classList.remove('showG');
+        AAFC.classList.add('showF6');
+        AAM.classList.remove('showME');
+        AAB4B.classList.remove('showB4B');
+        AARE.classList.remove('showRE');
         const votoFC = AAFC.value
         vertorVotos.splice(3, 1, votoFC)
     }
     function addvotoAAM() {
+        AAG.classList.remove('showG');
+        AAFC.classList.remove('showF6');
+        AAM.classList.add('showME');
+        AAB4B.classList.remove('showB4B');
+        AARE.classList.remove('showRE');
         const votoM = AAM.value
         vertorVotos.splice(3, 1, votoM)
     }
     function addvotoAAB4B() {
+        AAG.classList.remove('showG');
+        AAFC.classList.remove('showF6');
+        AAM.classList.remove('showME');
+        AAB4B.classList.add('showB4B');
+        AARE.classList.remove('showRE');
         const votoB4B = AAB4B.value
         vertorVotos.splice(3, 1, votoB4B)
     }
     function addvotoAARE() {
+        AAG.classList.remove('showG');
+        AAFC.classList.remove('showF6');
+        AAM.classList.remove('showME');
+        AAB4B.classList.remove('showB4B');
+        AARE.classList.add('showRE');
         const votoRE = AARE.value
         vertorVotos.splice(3, 1, votoRE)
     }
+    // -----------------------------------------------------------------------------------------------------------------------------
+    const IM = document.getElementById('IM')
+    const IDD = document.getElementById('IDD')
+    const II = document.getElementById('II')
+    const IK = document.getElementById('IK')
+    const IL = document.getElementById('IL')
     function addvotoIM() {
+        IM.classList.add('show12M');
+        IDD.classList.remove('showDD');
+        II.classList.remove('showI');
+        IK.classList.remove('showK');
+        IL.classList.remove('showLH');
         const votoM = IM.value
         vertorVotos.splice(4, 1, votoM)
     }
     function addvotoIDD() {
+        IM.classList.remove('show12M');
+        IDD.classList.add('showDD');
+        II.classList.remove('showI');
+        IK.classList.remove('showK');
+        IL.classList.remove('showLH');
         const votoDD = IDD.value
         vertorVotos.splice(4, 1, votoDD)
     }
     function addvotoII() {
+        IM.classList.remove('show12M');
+        IDD.classList.remove('showDD');
+        II.classList.add('showI');
+        IK.classList.remove('showK');
+        IL.classList.remove('showLH');
         const votoI = II.value
         vertorVotos.splice(4, 1, votoI)
     }
     function addvotoIK() {
+        IM.classList.remove('show12M');
+        IDD.classList.remove('showDD');
+        II.classList.remove('showI');
+        IK.classList.add('showK');
+        IL.classList.remove('showLH');
         const votoK = IK.value
         vertorVotos.splice(4, 1, votoK)
     }
     function addvotoIL() {
-
+        IM.classList.remove('show12M');
+        IDD.classList.remove('showDD');
+        II.classList.remove('showI');
+        IK.classList.remove('showK');
+        IL.classList.add('showLH');
         const votoL = IL.value
         vertorVotos.splice(4, 1, votoL)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // CADASTRAR VOTOS
     function cadastrarVotos() {
         msgALERTA.innerHTML = ``
@@ -550,7 +733,7 @@
                 AudioServer: vertorVotos[2],
                 AcaoAventuraServer: vertorVotos[3],
                 IndieServer: vertorVotos[4],
-                fkUsuarioServer: sessionStorage.ID_USUARIO
+                idServer: sessionStorage.ID_USUARIO
             })
         }).then(function (resposta) {
 
@@ -583,4 +766,19 @@
 
         return false;
     }
+</script>
+<script>
+    const modal_containerSess = document.getElementById('modal_containerSess')
+    function validarSessao() {
+
+    var email = sessionStorage.EMAIL_USUARIO;
+    var nome = sessionStorage.NOME_USUARIO;
+
+    if (email == null && nome == null) {
+        modal_containerSess.classList.add('showSess');
+    }
+}
+    function cadas(){
+        window.location = "cadastro.html";
+}
 </script>

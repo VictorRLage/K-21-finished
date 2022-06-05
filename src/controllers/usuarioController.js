@@ -135,7 +135,7 @@ function cadastrarVotos(req, res) {
     var Audio = req.body.AudioServer;
     var AcaoAventura = req.body.AcaoAventuraServer;
     var Indie = req.body.IndieServer;
-    var fkUsuario = req.body.fkUsuarioServer;
+    var id = req.body.idServer;
 
     // Faça as validações dos valores
     if (JogoDoAno == undefined) {
@@ -148,13 +148,12 @@ function cadastrarVotos(req, res) {
         res.status(400).send("Sua AcaoAventura está undefined!");
     }else if (Indie == undefined) {
         res.status(400).send("Sua Indie está undefined!");
-    }
-    else if (fkUsuario == undefined) {
-        res.status(400).send("Sua fkUsuario está undefined!");
+    }else if (id == undefined) {
+        res.status(400).send("Sua id está undefined!");
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrarVotos(JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, fkUsuario)
+        usuarioModel.cadastrarVotos(JogoDoAno, Multiplayer, Audio, AcaoAventura, Indie, id)
             .then(
                 function (resultado) {
                     res.json(resultado);

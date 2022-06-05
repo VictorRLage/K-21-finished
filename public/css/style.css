@@ -21,6 +21,8 @@
 }
 
 html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
   height: 100%;
 }
 
@@ -60,9 +62,9 @@ body {
   position: absolute;
   height: 50px;
   width: 0px;
-  margin-top: 23px;
+  margin-top: 26px;
   margin-left: 30px;
-  background: url(https://i.imgur.com/2dAKMfQ.png);
+  background: url(https://i.imgur.com/mtqP8Hy.png);
   background-repeat: no-repeat;
   background-size: cover;
   animation: reverse1 1.1s both;
@@ -169,8 +171,8 @@ body {
 }
 
 .navbar .btn_I {
-  
-  width: 200px;
+
+  width: 100px;
   word-spacing: 5px;
   height: 100px;
   font-size: 30px;
@@ -187,7 +189,7 @@ body {
 }
 
 .navbar .btn_22 {
-  width: 200px;
+  width: 170px;
   word-spacing: 5px;
   display: flex;
   align-items: center;
@@ -207,13 +209,13 @@ body {
 }
 
 .navbar .btn_AT {
-  width: 200px;
+  width: 140px;
   word-spacing: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
-  font-size: 26px;
+  font-size: 30px;
   cursor: pointer;
   border: none;
   background-color: #000aff;
@@ -228,12 +230,13 @@ body {
 
 .navbar .btn_L {
   padding: 0;
-  margin-left: 200px;
+  margin-left: 140px;
+  margin-right: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
-  width: 200px;
+  width: 100px;
   word-spacing: 5px;
   font-size: 30px;
   cursor: pointer;
@@ -318,7 +321,7 @@ footer {
 }
 
 .logoF {
-  margin-top: -3px;
+  margin-top: 1px;
   margin-left: 10px;
   position: absolute;
   height: 50px;
@@ -489,7 +492,7 @@ footer {
 /*Header inicio*/
 .navbar .btn_IX {
   height: 100px;
-  width: 200px;
+  width: 100px;
   word-spacing: 5px;
   font-size: 30px;
   cursor: pointer;
@@ -505,6 +508,86 @@ footer {
 }
 
 /*Fim Header inicio*/
+.containerI {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 623px;
+}
+
+.caixa1I {
+  word-spacing: 8px;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+.caixa1I b {
+  color: #03e9f4;
+}
+
+.caixa2I {
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: 33px;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  background-color: #000000;
+  height: 400px;
+  width: 1000px;
+}
+
+.caixa2I p {
+  text-align: center;
+  font-size: 40px;
+}
+
+.caixa2I b {
+  color: gold;
+}
+
+.caixa2I b:nth-child(2) {
+  color: #03e9f4;
+}
+.caixa2I b:nth-child(4) {
+  color: #03e9f4;
+}
+
+.btnI button {
+  font-size: 60px;
+  border-radius: 50px;
+  position: absolute;
+  border: none;
+  color: #fff;
+  background-color: #243b55;
+  width: 600px;
+  height: 100px;
+  transition: .5s;
+}
+
+.BTNLI {
+  margin-top: 50px;
+  margin-left: -700px;
+}
+
+.BTNCI {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.btnI button:hover {
+  transform: scale(1.1);
+  color: #03e9f4;
+}
+
 /*FIM TELA INICIO*/
 
 
@@ -537,12 +620,13 @@ footer {
 /*Header Login*/
 .navbar .btn_LX {
   padding: 0;
-  margin-left: 200px;
+  margin-left: 140px;
+  margin-right: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
-  width: 200px;
+  width: 100px;
   word-spacing: 5px;
   font-size: 30px;
   cursor: pointer;
@@ -1262,10 +1346,64 @@ footer {
 
 
 /*TELA 2022*/
+/* modal */
+.modal-containerSess {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transition: opacity 0.3s ease;
+  width: 100vw;
+  background-color: rgba(16, 51, 70, 0.98);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.modal-containerSess.showSess {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalSess {
+  background-color: rgb(36, 59, 85);
+  color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 10px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.modalSess button {
+  margin-top: 30px;
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000aff;
+  color: #fff;
+  font-size: 25px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.modalSess button:hover {
+  transform: scale(1.1);
+}
+
+.modalSess h1 {
+  letter-spacing: 2px;
+}
+
+/* modal */
 /*Header 2022*/
 .navbar .btn_22X {
   height: 100px;
-  width: 200px;
+  width: 170px;
   word-spacing: 5px;
   font-size: 30px;
   cursor: pointer;
@@ -1282,6 +1420,14 @@ footer {
 
 /*Fim Header 2022*/
 /*Header votação*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
 .header22 {
   letter-spacing: 1px;
   display: flex;
@@ -1293,6 +1439,8 @@ footer {
 }
 
 .header22 button {
+  margin-right: 150px;
+  margin-left: 150px;
   height: 40px;
   width: 200px;
   font-size: 25px;
@@ -1303,12 +1451,15 @@ footer {
   transition: 0.2s;
 }
 
-.categoriaANT22 {
-  margin-left: 340px;
-}
-
 
 .categoriaPROX22 {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+}
+
+.categoriaANT22 {
   margin-top: 7px;
   display: flex;
   flex-direction: row;
@@ -1321,13 +1472,14 @@ footer {
 
 /*Header votação*/
 /*btn votação*/
-.enviarVT{
+.enviarVT {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 200px;
 }
-.enviarVTBTN{
+
+.enviarVTBTN {
   border: none;
   color: #fff;
   background-color: #000aff;
@@ -1336,7 +1488,8 @@ footer {
   height: 60px;
   transition: .5s;
 }
-.enviarVTBTN:hover{
+
+.enviarVTBTN:hover {
   transform: scale(1.1);
 }
 
@@ -1348,25 +1501,29 @@ footer {
 
 
 /*VOTOS*/
-.conteinerVTM22{
+.conteinerVTM22 {
+  padding-top: 60px;
   width: 100%;
   height: 570px;
   display: flex;
   flex-direction: column;
 }
-.conteinerVTM222{
+
+.conteinerVTM222 {
   width: 100%;
   height: 700px;
   display: flex;
   flex-direction: column;
 }
-.conteinerVTM2223{
+
+.conteinerVTM2223 {
   width: 100%;
   height: 800px;
   display: flex;
   flex-direction: column;
 }
-.votosVTM223{
+
+.votosVTM223 {
   display: flex;
   flex-direction: row;
   padding: 15px 30px;
@@ -1375,7 +1532,7 @@ footer {
   margin-bottom: 100px;
 }
 
-.tituloVTM{
+.tituloVTM {
   letter-spacing: 1px;
   padding: 20px 50px;
   color: #fff;
@@ -1383,7 +1540,8 @@ footer {
   width: 100%;
   height: 50%;
 }
-.tituloVTM2{
+
+.tituloVTM2 {
   margin-top: 160px;
   letter-spacing: 1px;
   padding: 20px 50px;
@@ -1392,7 +1550,8 @@ footer {
   width: 100%;
   height: 50%;
 }
-.votosVTM22{
+
+.votosVTM22 {
   display: flex;
   flex-direction: row;
   padding: 15px 30px;
@@ -1400,25 +1559,36 @@ footer {
   height: 70%;
 }
 
-.setaD{
+.setaE {
   margin-top: 5px;
-  clip-path: polygon(21% 0%, 44% 50%, 20% 100%, 0% 100%, 25% 50%, 0% 0%);
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 75% 100%, 50% 53%, 75% 0);
   background-color: #fff;
   width: 20px;
   height: 20px;
-
 }
+
+.setaD {
+  margin-top: 5px;
+  clip-path: polygon(25% 0, 50% 49%, 25% 100%, 0 100%, 25% 50%, 0% 0%);
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
 /*botão votar Deathloop*/
-.Deathloop{
+.Deathloop {
   color: #fff;
 }
-.Deathloop h4{
+
+.Deathloop h4 {
   letter-spacing: 1px;
 }
-.Deathloop h1{
+
+.Deathloop h1 {
   letter-spacing: 2px;
 }
-.Deathloop button{
+
+.Deathloop button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Deathloop_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1434,26 +1604,31 @@ footer {
   font-size: 35px;
   margin-right: 40px;
   position: relative;
+  cursor: pointer;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Deathloop button:hover{
+
+.Deathloop button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.DeathloopBTN:hover > span:nth-child(1){
+
+.DeathloopBTN:hover>span:nth-child(1) {
   display: block;
 }
-.DeathloopBTN:hover > span:nth-child(2){
+
+.DeathloopBTN:hover>span:nth-child(2) {
   display: block;
 }
-.DeathloopBTN:hover > span:nth-child(3){
+
+.DeathloopBTN:hover>span:nth-child(3) {
   display: block;
 }
-.DeathloopBTN:hover > span:nth-child(4){
+
+.DeathloopBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -1505,21 +1680,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.DeathloopBTN span:nth-child(5){
+.DeathloopBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.DeathloopBTN.showDL span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.DeathloopBTN.showDL span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.DeathloopBTN.showDL span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.DeathloopBTN.showDL span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.DeathloopBTN.showDL span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar ItTakesTwo*/
-.ItTakesTwo{
+.ItTakesTwo {
   color: #fff;
 }
-.ItTakesTwo h4{
+
+.ItTakesTwo h4 {
   letter-spacing: 1px;
 }
-.ItTakesTwo h1{
+
+.ItTakesTwo h1 {
   letter-spacing: 2px;
 }
-.ItTakesTwo button{
+
+.ItTakesTwo button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_It-Takes-Two_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1530,6 +1737,7 @@ footer {
   transition: 0.25s;
   color: #fff;
   display: flex;
+  cursor: pointer;
   align-items: flex-end;
   justify-content: center;
   font-size: 35px;
@@ -1540,21 +1748,25 @@ footer {
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.ItTakesTwo button:hover{
+
+.ItTakesTwo button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.ItTakesTwoBTN:hover > span:nth-child(1){
+
+.ItTakesTwoBTN:hover>span:nth-child(1) {
   display: block;
 }
-.ItTakesTwoBTN:hover > span:nth-child(2){
+
+.ItTakesTwoBTN:hover>span:nth-child(2) {
   display: block;
 }
-.ItTakesTwoBTN:hover > span:nth-child(3){
+
+.ItTakesTwoBTN:hover>span:nth-child(3) {
   display: block;
 }
-.ItTakesTwoBTN:hover > span:nth-child(4){
+
+.ItTakesTwoBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -1606,21 +1818,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.ItTakesTwoBTN span:nth-child(5){
+.ItTakesTwoBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.ItTakesTwoBTN.showT2 span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.ItTakesTwoBTN.showT2 span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.ItTakesTwoBTN.showT2 span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.ItTakesTwoBTN.showT2 span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.ItTakesTwoBTN.showT2 span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Metroid*/
-.Metroid{
+.Metroid {
   color: #fff;
 }
-.Metroid h4{
+
+.Metroid h4 {
   letter-spacing: 1px;
 }
-.Metroid h1{
+
+.Metroid h1 {
   letter-spacing: 2px;
 }
-.Metroid button{
+
+.Metroid button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Metroid-Dread_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1635,27 +1879,32 @@ footer {
   justify-content: center;
   font-size: 35px;
   margin-right: 40px;
+  cursor: pointer;
   position: relative;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Metroid button:hover{
+
+.Metroid button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.MetroidBTN:hover > span:nth-child(1){
+
+.MetroidBTN:hover>span:nth-child(1) {
   display: block;
 }
-.MetroidBTN:hover > span:nth-child(2){
+
+.MetroidBTN:hover>span:nth-child(2) {
   display: block;
 }
-.MetroidBTN:hover > span:nth-child(3){
+
+.MetroidBTN:hover>span:nth-child(3) {
   display: block;
 }
-.MetroidBTN:hover > span:nth-child(4){
+
+.MetroidBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -1707,21 +1956,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.MetroidBTN span:nth-child(5){
+.MetroidBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.MetroidBTN.showME span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.MetroidBTN.showME span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.MetroidBTN.showME span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.MetroidBTN.showME span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.MetroidBTN.showME span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Ratchet*/
-.Ratchet{
+.Ratchet {
   color: #fff;
 }
-.Ratchet h4{
+
+.Ratchet h4 {
   letter-spacing: 1px;
 }
-.Ratchet h1{
+
+.Ratchet h1 {
   letter-spacing: 2px;
 }
-.Ratchet button{
+
+.Ratchet button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Ratchet-And_Clank_1080x1080_V2.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1731,6 +2012,7 @@ footer {
   background-color: #0e1723;
   transition: 0.25s;
   color: #fff;
+  cursor: pointer;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1742,21 +2024,25 @@ footer {
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Ratchet button:hover{
+
+.Ratchet button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.RatchetBTN:hover > span:nth-child(1){
+
+.RatchetBTN:hover>span:nth-child(1) {
   display: block;
 }
-.RatchetBTN:hover > span:nth-child(2){
+
+.RatchetBTN:hover>span:nth-child(2) {
   display: block;
 }
-.RatchetBTN:hover > span:nth-child(3){
+
+.RatchetBTN:hover>span:nth-child(3) {
   display: block;
 }
-.RatchetBTN:hover > span:nth-child(4){
+
+.RatchetBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -1808,21 +2094,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.RatchetBTN span:nth-child(5){
+.RatchetBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.RatchetBTN.showRC span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.RatchetBTN.showRC span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.RatchetBTN.showRC span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.RatchetBTN.showRC span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.RatchetBTN.showRC span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Resident*/
-.Resident{
+.Resident {
   color: #fff;
 }
-.Resident h4{
+
+.Resident h4 {
   letter-spacing: 1px;
 }
-.Resident h1{
+
+.Resident h1 {
   letter-spacing: 2px;
 }
-.Resident button{
+
+.Resident button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Resident-Evil-Village_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1839,25 +2157,30 @@ footer {
   margin-right: 40px;
   position: relative;
   display: inline-block;
+  cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Resident button:hover{
+
+.Resident button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.ResidentBTN:hover > span:nth-child(1){
+
+.ResidentBTN:hover>span:nth-child(1) {
   display: block;
 }
-.ResidentBTN:hover > span:nth-child(2){
+
+.ResidentBTN:hover>span:nth-child(2) {
   display: block;
 }
-.ResidentBTN:hover > span:nth-child(3){
+
+.ResidentBTN:hover>span:nth-child(3) {
   display: block;
 }
-.ResidentBTN:hover > span:nth-child(4){
+
+.ResidentBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -1909,22 +2232,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.ResidentBTN span:nth-child(5){
+.ResidentBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
 
+.ResidentBTN.showRE span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.ResidentBTN.showRE span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.ResidentBTN.showRE span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.ResidentBTN.showRE span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.ResidentBTN.showRE span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar FFXIV*/
-.FFXIV{
+.FFXIV {
   color: #fff;
 }
-.FFXIV h4{
+
+.FFXIV h4 {
   letter-spacing: 1px;
 }
-.FFXIV h1{
+
+.FFXIV h1 {
   letter-spacing: 2px;
 }
-.FFXIV button{
+
+.FFXIV button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_FINAL-FANTASY-VIV_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1935,6 +2289,7 @@ footer {
   transition: 0.25s;
   color: #fff;
   display: flex;
+  cursor: pointer;
   align-items: flex-end;
   justify-content: center;
   font-size: 35px;
@@ -1945,21 +2300,25 @@ footer {
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.FFXIV button:hover{
+
+.FFXIV button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.FFXIVBTN:hover > span:nth-child(1){
+
+.FFXIVBTN:hover>span:nth-child(1) {
   display: block;
 }
-.FFXIVBTN:hover > span:nth-child(2){
+
+.FFXIVBTN:hover>span:nth-child(2) {
   display: block;
 }
-.FFXIVBTN:hover > span:nth-child(3){
+
+.FFXIVBTN:hover>span:nth-child(3) {
   display: block;
 }
-.FFXIVBTN:hover > span:nth-child(4){
+
+.FFXIVBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2011,22 +2370,54 @@ footer {
   animation-delay: 1.5s;
 }
 
-.FFXIVBTN span:nth-child(5){
+.FFXIVBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.FFXIVBTN.showFF span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.FFXIVBTN.showFF span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.FFXIVBTN.showFF span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.FFXIVBTN.showFF span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.FFXIVBTN.showFF span:nth-child(5) {
+  color: #000aff;
+}
+
 /*VOTOS*/
 /*botão votar Cyberpunk*/
-.Cyberpunk{
+.Cyberpunk {
   color: #fff;
 }
-.Cyberpunk h4{
+
+.Cyberpunk h4 {
   letter-spacing: 1px;
 }
-.Cyberpunk h1{
+
+.Cyberpunk h1 {
   letter-spacing: 2px;
 }
-.Cyberpunk button{
+
+.Cyberpunk button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Cyberpunk-2077_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2040,6 +2431,7 @@ footer {
   align-items: flex-end;
   justify-content: center;
   font-size: 35px;
+  cursor: pointer;
   margin-right: 40px;
   position: relative;
   display: inline-block;
@@ -2047,21 +2439,25 @@ footer {
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Cyberpunk button:hover{
+
+.Cyberpunk button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.CyberpunkBTN:hover > span:nth-child(1){
+
+.CyberpunkBTN:hover>span:nth-child(1) {
   display: block;
 }
-.CyberpunkBTN:hover > span:nth-child(2){
+
+.CyberpunkBTN:hover>span:nth-child(2) {
   display: block;
 }
-.CyberpunkBTN:hover > span:nth-child(3){
+
+.CyberpunkBTN:hover>span:nth-child(3) {
   display: block;
 }
-.CyberpunkBTN:hover > span:nth-child(4){
+
+.CyberpunkBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2113,21 +2509,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.CyberpunkBTN span:nth-child(5){
+.CyberpunkBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.CyberpunkBTN.showC77 span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.CyberpunkBTN.showC77 span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.CyberpunkBTN.showC77 span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.CyberpunkBTN.showC77 span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.CyberpunkBTN.showC77 span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Back4blood*/
-.Back4blood{
+.Back4blood {
   color: #fff;
 }
-.Back4blood h4{
+
+.Back4blood h4 {
   letter-spacing: 1px;
 }
-.Back4blood h1{
+
+.Back4blood h1 {
   letter-spacing: 2px;
 }
-.Back4blood button{
+
+.Back4blood button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Back-4-Blood_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2137,6 +2565,7 @@ footer {
   background-color: #0e1723;
   transition: 0.25s;
   color: #fff;
+  cursor: pointer;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -2148,21 +2577,25 @@ footer {
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Back4blood button:hover{
+
+.Back4blood button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.Back4bloodBTN:hover > span:nth-child(1){
+
+.Back4bloodBTN:hover>span:nth-child(1) {
   display: block;
 }
-.Back4bloodBTN:hover > span:nth-child(2){
+
+.Back4bloodBTN:hover>span:nth-child(2) {
   display: block;
 }
-.Back4bloodBTN:hover > span:nth-child(3){
+
+.Back4bloodBTN:hover>span:nth-child(3) {
   display: block;
 }
-.Back4bloodBTN:hover > span:nth-child(4){
+
+.Back4bloodBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2214,21 +2647,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.Back4bloodBTN span:nth-child(5){
+.Back4bloodBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.Back4bloodBTN.showB4B span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.Back4bloodBTN.showB4B span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.Back4bloodBTN.showB4B span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.Back4bloodBTN.showB4B span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.Back4bloodBTN.showB4B span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar City*/
-.City{
+.City {
   color: #fff;
 }
-.City h4{
+
+.City h4 {
   letter-spacing: 1px;
 }
-.City h1{
+
+.City h1 {
   letter-spacing: 2px;
 }
-.City button{
+
+.City button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Knockout-City_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2244,26 +2709,31 @@ footer {
   font-size: 35px;
   margin-right: 40px;
   position: relative;
+  cursor: pointer;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.City button:hover{
+
+.City button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.CityBTN:hover > span:nth-child(1){
+
+.CityBTN:hover>span:nth-child(1) {
   display: block;
 }
-.CityBTN:hover > span:nth-child(2){
+
+.CityBTN:hover>span:nth-child(2) {
   display: block;
 }
-.CityBTN:hover > span:nth-child(3){
+
+.CityBTN:hover>span:nth-child(3) {
   display: block;
 }
-.CityBTN:hover > span:nth-child(4){
+
+.CityBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2315,21 +2785,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.CityBTN span:nth-child(5){
+.CityBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
-/*botão votar City*/
-.NewWorld{
+
+.CityBTN.showKC span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.CityBTN.showKC span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.CityBTN.showKC span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.CityBTN.showKC span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.CityBTN.showKC span:nth-child(5) {
+  color: #000aff;
+}
+
+/*botão votar NW*/
+.NewWorld {
   color: #fff;
 }
-.NewWorld h4{
+
+.NewWorld h4 {
   letter-spacing: 1px;
 }
-.NewWorld h1{
+
+.NewWorld h1 {
   letter-spacing: 2px;
 }
-.NewWorld button{
+
+.NewWorld button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_New-World_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2340,6 +2842,7 @@ footer {
   transition: 0.25s;
   color: #fff;
   display: flex;
+  cursor: pointer;
   align-items: flex-end;
   justify-content: center;
   font-size: 35px;
@@ -2350,21 +2853,25 @@ footer {
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.NewWorld button:hover{
+
+.NewWorld button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.NewWorldBTN:hover > span:nth-child(1){
+
+.NewWorldBTN:hover>span:nth-child(1) {
   display: block;
 }
-.NewWorldBTN:hover > span:nth-child(2){
+
+.NewWorldBTN:hover>span:nth-child(2) {
   display: block;
 }
-.NewWorldBTN:hover > span:nth-child(3){
+
+.NewWorldBTN:hover>span:nth-child(3) {
   display: block;
 }
-.NewWorldBTN:hover > span:nth-child(4){
+
+.NewWorldBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2416,22 +2923,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.NewWorldBTN span:nth-child(5){
+.NewWorldBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
 
+.NewWorldBTN.showNW span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.NewWorldBTN.showNW span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.NewWorldBTN.showNW span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.NewWorldBTN.showNW span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.NewWorldBTN.showNW span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Valheim*/
-.Valheim{
+.Valheim {
   color: #fff;
 }
-.Valheim h4{
+
+.Valheim h4 {
   letter-spacing: 1px;
 }
-.Valheim h1{
+
+.Valheim h1 {
   letter-spacing: 2px;
 }
-.Valheim button{
+
+.Valheim button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Valheim_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2448,25 +2986,30 @@ footer {
   margin-right: 40px;
   position: relative;
   display: inline-block;
+  cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Valheim button:hover{
+
+.Valheim button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.valheimBTN:hover > span:nth-child(1){
+
+.valheimBTN:hover>span:nth-child(1) {
   display: block;
 }
-.valheimBTN:hover > span:nth-child(2){
+
+.valheimBTN:hover>span:nth-child(2) {
   display: block;
 }
-.valheimBTN:hover > span:nth-child(3){
+
+.valheimBTN:hover>span:nth-child(3) {
   display: block;
 }
-.valheimBTN:hover > span:nth-child(4){
+
+.valheimBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2518,21 +3061,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.valheimBTN span:nth-child(5){
+.valheimBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.valheimBTN.showV span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.valheimBTN.showV span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.valheimBTN.showV span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.valheimBTN.showV span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.valheimBTN.showV span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Valheim*/
-.Forza{
+.Forza {
   color: #fff;
 }
-.Forza h4{
+
+.Forza h4 {
   letter-spacing: 1px;
 }
-.Forza h1{
+
+.Forza h1 {
   letter-spacing: 2px;
 }
-.Forza button{
+
+.Forza button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_FORZA_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2547,27 +3122,32 @@ footer {
   justify-content: center;
   font-size: 35px;
   margin-right: 40px;
+  cursor: pointer;
   position: relative;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Forza button:hover{
+
+.Forza button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.ForzaBTN:hover > span:nth-child(1){
+
+.ForzaBTN:hover>span:nth-child(1) {
   display: block;
 }
-.ForzaBTN:hover > span:nth-child(2){
+
+.ForzaBTN:hover>span:nth-child(2) {
   display: block;
 }
-.ForzaBTN:hover > span:nth-child(3){
+
+.ForzaBTN:hover>span:nth-child(3) {
   display: block;
 }
-.ForzaBTN:hover > span:nth-child(4){
+
+.ForzaBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2619,22 +3199,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.ForzaBTN span:nth-child(5){
+.ForzaBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
 
+.ForzaBTN.showF5 span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.ForzaBTN.showF5 span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.ForzaBTN.showF5 span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.ForzaBTN.showF5 span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.ForzaBTN.showF5 span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Nier*/
-.Nier{
+.Nier {
   color: #fff;
 }
-.Nier h4{
+
+.Nier h4 {
   letter-spacing: 1px;
 }
-.Nier h1{
+
+.Nier h1 {
   letter-spacing: 2px;
 }
-.Nier button{
+
+.Nier button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_NieR-Replicant_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2645,6 +3256,7 @@ footer {
   transition: 0.25s;
   color: #fff;
   display: flex;
+  cursor: pointer;
   align-items: flex-end;
   justify-content: center;
   font-size: 35px;
@@ -2655,21 +3267,25 @@ footer {
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Nier button:hover{
+
+.Nier button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.NierBTN:hover > span:nth-child(1){
+
+.NierBTN:hover>span:nth-child(1) {
   display: block;
 }
-.NierBTN:hover > span:nth-child(2){
+
+.NierBTN:hover>span:nth-child(2) {
   display: block;
 }
-.NierBTN:hover > span:nth-child(3){
+
+.NierBTN:hover>span:nth-child(3) {
   display: block;
 }
-.NierBTN:hover > span:nth-child(4){
+
+.NierBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2721,23 +3337,54 @@ footer {
   animation-delay: 1.5s;
 }
 
-.NierBTN span:nth-child(5){
+.NierBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
 
+.NierBTN.showN span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.NierBTN.showN span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.NierBTN.showN span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.NierBTN.showN span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.NierBTN.showN span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Guardioes*/
-.Guardioes{
+.Guardioes {
   color: #fff;
 }
-.Guardioes h4{
+
+.Guardioes h4 {
   letter-spacing: 1px;
 }
-.Guardioes h1{
+
+.Guardioes h1 {
   letter-spacing: 2px;
 }
-.Guardioes button{
-  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Guardians-of-the-Galaxy_1080x1080.jpg );
+
+.Guardioes button {
+  background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Guardians-of-the-Galaxy_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   border: none;
@@ -2754,24 +3401,29 @@ footer {
   position: relative;
   display: inline-block;
   text-decoration: none;
+  cursor: pointer;
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.Guardioes button:hover{
+
+.Guardioes button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.GuardioesBTN:hover > span:nth-child(1){
+
+.GuardioesBTN:hover>span:nth-child(1) {
   display: block;
 }
-.GuardioesBTN:hover > span:nth-child(2){
+
+.GuardioesBTN:hover>span:nth-child(2) {
   display: block;
 }
-.GuardioesBTN:hover > span:nth-child(3){
+
+.GuardioesBTN:hover>span:nth-child(3) {
   display: block;
 }
-.GuardioesBTN:hover > span:nth-child(4){
+
+.GuardioesBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2823,27 +3475,60 @@ footer {
   animation-delay: 1.5s;
 }
 
-.GuardioesBTN span:nth-child(5){
+.GuardioesBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.GuardioesBTN.showG span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.GuardioesBTN.showG span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.GuardioesBTN.showG span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.GuardioesBTN.showG span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.GuardioesBTN.showG span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar FarCry*/
-.FarCry{
+.FarCry {
   color: #fff;
 }
-.FarCry h4{
+
+.FarCry h4 {
   letter-spacing: 1px;
 }
-.FarCry h1{
+
+.FarCry h1 {
   letter-spacing: 2px;
 }
-.FarCry button{
+
+.FarCry button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Far-Cry-6_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   border: none;
   height: 300px;
   width: 250px;
+  cursor: pointer;
   background-color: #0e1723;
   transition: 0.25s;
   color: #fff;
@@ -2858,21 +3543,25 @@ footer {
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.FarCry button:hover{
+
+.FarCry button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.FarCryBTN:hover > span:nth-child(1){
+
+.FarCryBTN:hover>span:nth-child(1) {
   display: block;
 }
-.FarCryBTN:hover > span:nth-child(2){
+
+.FarCryBTN:hover>span:nth-child(2) {
   display: block;
 }
-.FarCryBTN:hover > span:nth-child(3){
+
+.FarCryBTN:hover>span:nth-child(3) {
   display: block;
 }
-.FarCryBTN:hover > span:nth-child(4){
+
+.FarCryBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -2924,22 +3613,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.FarCryBTN span:nth-child(5){
+.FarCryBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
 
+.FarCryBTN.showF6 span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.FarCryBTN.showF6 span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.FarCryBTN.showF6 span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.FarCryBTN.showF6 span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.FarCryBTN.showF6 span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar minutes*/
-.minutes{
+.minutes {
   color: #fff;
 }
-.minutes h4{
+
+.minutes h4 {
   letter-spacing: 1px;
 }
-.minutes h1{
+
+.minutes h1 {
   letter-spacing: 2px;
 }
-.minutes button{
+
+.minutes button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_12-Minutes_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2950,6 +3670,7 @@ footer {
   transition: 0.25s;
   color: #fff;
   display: flex;
+  cursor: pointer;
   align-items: flex-end;
   justify-content: center;
   font-size: 35px;
@@ -2960,21 +3681,25 @@ footer {
   text-transform: uppercase;
   overflow: hidden;
 }
-  
-.minutes button:hover{
+
+.minutes button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.minutesBTN:hover > span:nth-child(1){
+
+.minutesBTN:hover>span:nth-child(1) {
   display: block;
 }
-.minutesBTN:hover > span:nth-child(2){
+
+.minutesBTN:hover>span:nth-child(2) {
   display: block;
 }
-.minutesBTN:hover > span:nth-child(3){
+
+.minutesBTN:hover>span:nth-child(3) {
   display: block;
 }
-.minutesBTN:hover > span:nth-child(4){
+
+.minutesBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -3026,21 +3751,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.minutesBTN span:nth-child(5){
+.minutesBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.minutesBTN.show12M span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.minutesBTN.show12M span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.minutesBTN.show12M span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.minutesBTN.show12M span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.minutesBTN.show12M span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar DD*/
-.DD{
+.DD {
   color: #fff;
 }
-.DD h4{
+
+.DD h4 {
   letter-spacing: 1px;
 }
-.DD h1{
+
+.DD h1 {
   letter-spacing: 2px;
 }
-.DD button{
+
+.DD button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Deaths-Door_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -3060,22 +3817,27 @@ footer {
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
+  cursor: pointer;
 }
-  
-.DD button:hover{
+
+.DD button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.DDBTN:hover > span:nth-child(1){
+
+.DDBTN:hover>span:nth-child(1) {
   display: block;
 }
-.DDBTN:hover > span:nth-child(2){
+
+.DDBTN:hover>span:nth-child(2) {
   display: block;
 }
-.DDBTN:hover > span:nth-child(3){
+
+.DDBTN:hover>span:nth-child(3) {
   display: block;
 }
-.DDBTN:hover > span:nth-child(4){
+
+.DDBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -3127,22 +3889,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.DDBTN span:nth-child(5){
+.DDBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
 
+.DDBTN.showDD span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.DDBTN.showDD span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.DDBTN.showDD span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.DDBTN.showDD span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.DDBTN.showDD span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Inscryption*/
-.Inscryption{
+.Inscryption {
   color: #fff;
 }
-.Inscryption h4{
+
+.Inscryption h4 {
   letter-spacing: 1px;
 }
-.Inscryption h1{
+
+.Inscryption h1 {
   letter-spacing: 2px;
 }
-.Inscryption button{
+
+.Inscryption button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Inscryption_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -3162,22 +3955,27 @@ footer {
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
+  cursor: pointer;
 }
-  
-.Inscryption button:hover{
+
+.Inscryption button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.InscryptionBTN:hover > span:nth-child(1){
+
+.InscryptionBTN:hover>span:nth-child(1) {
   display: block;
 }
-.InscryptionBTN:hover > span:nth-child(2){
+
+.InscryptionBTN:hover>span:nth-child(2) {
   display: block;
 }
-.InscryptionBTN:hover > span:nth-child(3){
+
+.InscryptionBTN:hover>span:nth-child(3) {
   display: block;
 }
-.InscryptionBTN:hover > span:nth-child(4){
+
+.InscryptionBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -3229,21 +4027,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.InscryptionBTN span:nth-child(5){
+.InscryptionBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.InscryptionBTN.showI span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.InscryptionBTN.showI span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.InscryptionBTN.showI span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.InscryptionBTN.showI span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.InscryptionBTN.showI span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Kena*/
-.Kena{
+.Kena {
   color: #fff;
 }
-.Kena h4{
+
+.Kena h4 {
   letter-spacing: 1px;
 }
-.Kena h1{
+
+.Kena h1 {
   letter-spacing: 2px;
 }
-.Kena button{
+
+.Kena button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_KENA_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -3263,22 +4093,27 @@ footer {
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
+  cursor: pointer;
 }
-  
-.Kena button:hover{
+
+.Kena button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.KenaBTN:hover > span:nth-child(1){
+
+.KenaBTN:hover>span:nth-child(1) {
   display: block;
 }
-.KenaBTN:hover > span:nth-child(2){
+
+.KenaBTN:hover>span:nth-child(2) {
   display: block;
 }
-.KenaBTN:hover > span:nth-child(3){
+
+.KenaBTN:hover>span:nth-child(3) {
   display: block;
 }
-.KenaBTN:hover > span:nth-child(4){
+
+.KenaBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -3330,22 +4165,53 @@ footer {
   animation-delay: 1.5s;
 }
 
-.KenaBTN span:nth-child(5){
+.KenaBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
 
+.KenaBTN.showK span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.KenaBTN.showK span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.KenaBTN.showK span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.KenaBTN.showK span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.KenaBTN.showK span:nth-child(5) {
+  color: #000aff;
+}
+
 /*botão votar Loop*/
-.Loop{
+.Loop {
   color: #fff;
 }
-.Loop h4{
+
+.Loop h4 {
   letter-spacing: 1px;
 }
-.Loop h1{
+
+.Loop h1 {
   letter-spacing: 2px;
 }
-.Loop button{
+
+.Loop button {
   background-image: url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Loop-Hero_1080x1080.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -3365,22 +4231,27 @@ footer {
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
+  cursor: pointer;
 }
-  
-.Loop button:hover{
+
+.Loop button:hover {
   transform: scale(1.01);
   color: #03e9f4;
 }
-.LoopBTN:hover > span:nth-child(1){
+
+.LoopBTN:hover>span:nth-child(1) {
   display: block;
 }
-.LoopBTN:hover > span:nth-child(2){
+
+.LoopBTN:hover>span:nth-child(2) {
   display: block;
 }
-.LoopBTN:hover > span:nth-child(3){
+
+.LoopBTN:hover>span:nth-child(3) {
   display: block;
 }
-.LoopBTN:hover > span:nth-child(4){
+
+.LoopBTN:hover>span:nth-child(4) {
   display: block;
 }
 
@@ -3432,10 +4303,39 @@ footer {
   animation-delay: 1.5s;
 }
 
-.LoopBTN span:nth-child(5){
+.LoopBTN span:nth-child(5) {
   margin-top: 105px;
   margin-left: 90px;
 }
+
+.LoopBTN.showLH span:nth-child(1) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #000aff);
+}
+
+.LoopBTN.showLH span:nth-child(2) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(180deg, transparent, #000aff);
+}
+
+.LoopBTN.showLH span:nth-child(3) {
+  display: block;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, #000aff);
+}
+
+.LoopBTN.showLH span:nth-child(4) {
+  display: block;
+  width: 10px;
+  background: linear-gradient(360deg, transparent, #000aff);
+}
+
+.LoopBTN.showLH span:nth-child(5) {
+  color: #000aff;
+}
+
 /*VOTOS*/
 
 
@@ -3461,12 +4361,99 @@ footer {
 
 
 /*TELA RESULTADOS*/
+/*botão votar GanhadorJDA*/
+.GanhadorJDA {
+  color: #fff;
+}
+
+.GanhadorJDA h4 {
+  letter-spacing: 1px;
+}
+
+.GanhadorJDA h1 {
+  letter-spacing: 2px;
+}
+
+.GanhadorJDA button {
+  margin-top: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: gold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.GanhadorJDABTN span {
+  position: absolute;
+  display: block;
+}
+
+.GanhadorJDABTN span:nth-child(1) {
+  display: block;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, gold);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.GanhadorJDABTN span:nth-child(2) {
+  display: block;
+  top: -100%;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, gold);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.GanhadorJDABTN span:nth-child(3) {
+  display: block;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, gold);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.GanhadorJDABTN span:nth-child(4) {
+  display: block;
+  bottom: -100%;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, gold);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.GanhadorJDABTN span:nth-child(5) {
+  margin-top: 105px;
+  margin-left: 75px;
+}
+
 /*Header Resultados*/
 .navbar .btn_ATX {
   height: 100px;
-  width: 200px;
+  width: 140px;
   word-spacing: 5px;
-  font-size: 29px;
+  font-size: 30px;
   cursor: pointer;
   border: none;
   border-top: 5px white solid;
@@ -3478,28 +4465,340 @@ footer {
 .navbar .btn_ATX:hover {
   text-shadow: 2px 2px black;
 }
+
 /*Fim Header Resultados*/
-.containerR{
+.containerR {
   display: flex;
-  align-items: center;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-.tituloR{
+
+.tituloR {
   text-align: center;
   color: #fff;
   font-size: 40px;
   height: 200px;
 }
-.tituloR h1{
+
+.tituloR h1 {
   margin-top: 50px;
 }
-.grafico_JDA{
-  background-color: #fff;
+
+/* GRAFICO JDA */
+.JDA_R {
+  height: 600px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
 }
-.grafico_JDA{
-  height: 450px;
+
+.JDA_R h1 {
+  border-bottom: #03e9f4 solid 5px;
+  margin-left: 650px;
+  margin-top: -110px;
+  font-size: 60px;
+  position: absolute;
+  color: #fff;
+}
+
+.grafico_JDA {
+  border-radius: 10px;
+  background-color: #fff;
+  margin-left: 30px;
+  height: 425px;
   width: 850px;
 }
+
+.img_JDA {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  letter-spacing: 1px;
+  margin-left: 60px;
+  text-align: justify;
+  font-size: 30px;
+  color: #fff;
+}
+
+.img_JDA b {
+  color: gold;
+}
+
+/* GRAFICO JDA */
+
+
+
+
+
+
+
+/* GRAFICO M */
+.M_R {
+  height: 600px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.M_R h1 {
+  border-bottom: #03e9f4 solid 5px;
+  margin-left: 650px;
+  margin-top: -110px;
+  font-size: 60px;
+  position: absolute;
+  color: #fff;
+}
+
+.grafico_M {
+  border-radius: 10px;
+  background-color: #fff;
+  margin-left: 30px;
+  height: 425px;
+  width: 850px;
+}
+
+.img_M {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  letter-spacing: 1px;
+  margin-left: 60px;
+  text-align: justify;
+  font-size: 30px;
+  color: #fff;
+}
+
+.img_M b {
+  color: gold;
+}
+
+/* GRAFICO M */
+
+
+
+
+
+
+
+/* GRAFICO A */
+.A_R {
+  height: 600px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.A_R h1 {
+  border-bottom: #03e9f4 solid 5px;
+  margin-left: 720px;
+  margin-top: -110px;
+  font-size: 60px;
+  position: absolute;
+  color: #fff;
+}
+
+.grafico_A {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 30px;
+  height: 425px;
+  width: 850px;
+}
+
+.img_A {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  letter-spacing: 1px;
+  margin-left: 60px;
+  text-align: justify;
+  font-size: 30px;
+  color: #fff;
+}
+
+.img_A b {
+  color: gold;
+}
+
+/* GRAFICO A */
+
+
+
+
+/* GRAFICO AA */
+/*botão votar GanhadorJDA*/
+.GanhadorAA {
+  color: #fff;
+}
+
+.GanhadorAA h4 {
+  letter-spacing: 1px;
+}
+
+.GanhadorAA h1 {
+  letter-spacing: 2px;
+}
+
+.GanhadorAA button {
+  margin-right: 55px;
+  margin-top: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 300px;
+  width: 250px;
+  background-color: #0e1723;
+  transition: 0.25s;
+  color: gold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.GanhadorAABTN span {
+  position: absolute;
+  display: block;
+}
+
+.GanhadorAABTN span:nth-child(1) {
+  display: block;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, gold);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.GanhadorAABTN span:nth-child(2) {
+  display: block;
+  top: -100%;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, gold);
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s;
+}
+
+.GanhadorAABTN span:nth-child(3) {
+  display: block;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(270deg, transparent, gold);
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.GanhadorAABTN span:nth-child(4) {
+  display: block;
+  bottom: -100%;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, gold);
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.GanhadorAABTN span:nth-child(5) {
+  margin-top: 105px;
+  margin-left: 75px;
+}
+
+.AA_R {
+  height: 600px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.AA_R h1 {
+  border-bottom: #03e9f4 solid 5px;
+  margin-left: 625px;
+  margin-top: -110px;
+  font-size: 60px;
+  position: absolute;
+  color: #fff;
+}
+
+.grafico_AA {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 30px;
+  height: 425px;
+  width: 850px;
+}
+
+.img_AA {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  letter-spacing: 1px;
+  text-align: justify;
+  font-size: 30px;
+  color: #fff;
+  width: 600px;
+}
+
+.img_AA b {
+  color: gold;
+}
+
+/* GRAFICO AA */
+
+
+
+
+
+/* GRAFICO I */
+.I_R {
+  height: 600px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.I_R h1 {
+  border-bottom: #03e9f4 solid 5px;
+  margin-left: 735px;
+  margin-top: -110px;
+  font-size: 60px;
+  position: absolute;
+  color: #fff;
+}
+
+.grafico_I {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 30px;
+  height: 425px;
+  width: 850px;
+}
+
+.img_I {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  letter-spacing: 1px;
+  margin-left: 60px;
+  text-align: justify;
+  font-size: 30px;
+  color: #fff;
+}
+
+.img_I b {
+  color: gold;
+}
+
+/* GRAFICO I */
 /*FIM TELA RESULTADOS*/

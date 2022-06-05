@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
-    <title>Resultados|| K- 21</title>
+    <title>Resultados || K- 21</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <ul class="navbar">
                 <li><button class="btn_I" onclick="window.location.href='index.html'">Início</button></li>
                 <li><button class="btn_22" onclick="window.location.href='2022.html'">Votação 2021</button></li>
-                <li><button class="btn_AT" onclick="window.location.href='resultados.html'">Resultados</button></li>
+                <li><button class="btn_ATX" onclick="window.location.href='resultados.html'">Resultados</button></li>
                 <li><button class="btn_L" onclick="window.location.href='login.html'">Login</button></li>
             </ul>
             <div class="LL"><img class="img_L" src="https://i.imgur.com/jfzM7hF.png"></div>
@@ -33,11 +33,98 @@
             <h1>Resultados Premiação K-21</h1>
         </div>
         <div class="JDA_R">
+            <h1>Jogo do ano</h1>
             <div class="grafico_JDA">
                 <canvas id="canvas_grafico"></canvas>
             </div>
             <div class="img_JDA">
-
+                <h2>Com <b id="votosJDA">0</b> Votos o ganhador de <br> Jogo do Ano é:</h2>
+                <div class="GanhadorJDA">
+                    <button id="GanhadorJDABTN" style="background-image: url();" onclick="" id="" value=""
+                        class="GanhadorJDABTN">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>VENCEDOR</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="M_R">
+            <h1>Multiplayer</h1>
+            <div class="grafico_M">
+                <canvas id="canvas_graficoM"></canvas>
+            </div>
+            <div class="img_M">
+                <h2>Com <b id="votosM">0</b> Votos o ganhador de <br> Melhor jogo Multiplayer é:</h2>
+                <div class="GanhadorJDA">
+                    <button id="GanhadorMBTN" style="background-image: url();" onclick="" id="" value=""
+                        class="GanhadorJDABTN">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>VENCEDOR</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="A_R">
+            <h1>Audio</h1>
+            <div class="grafico_A">
+                <canvas id="canvas_graficoA"></canvas>
+            </div>
+            <div class="img_A">
+                <h2>Com <b id="votosA">0</b> Votos o ganhador de <br> jogo com melhor Audio é:</h2>
+                <div class="GanhadorJDA">
+                    <button id="GanhadorABTN" style="background-image: url();" onclick="" id="" value=""
+                        class="GanhadorJDABTN">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>VENCEDOR</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="AA_R">
+            <h1>Ação/Aventura</h1>
+            <div class="grafico_AA">
+                <canvas id="canvas_graficoAA"></canvas>
+            </div>
+            <div class="img_AA">
+                <h2>Com <b id="votosAA">0</b> Votos o ganhador de melhor <br> jogo de ação/aventura é:</h2>
+                <div class="GanhadorAA">
+                    <button id="GanhadorAABTN" style="background-image: url();" onclick="" id="" value=""
+                        class="GanhadorAABTN">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>VENCEDOR</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="I_R">
+            <h1>Indie</h1>
+            <div class="grafico_I">
+                <canvas id="canvas_graficoI"></canvas>
+            </div>
+            <div class="img_I">
+                <h2>Com <b id="votosI">0</b> Votos o ganhador de <br> Melhor jogo Indie é:</h2>
+                <div class="GanhadorJDA">
+                    <button id="GanhadorIBTN" style="background-image: url();" onclick="" id="" value=""
+                        class="GanhadorJDABTN">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>VENCEDOR</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -48,7 +135,7 @@
             <div class="footerEsquerda">
                 <div class="logoFF">
                     <img class="chaveFE" src="https://i.imgur.com/yqyyC1j.png">
-                    <img class="logoF" src="https://i.imgur.com/CujXbZW.png">
+                    <img class="logoF" src="https://i.imgur.com/mtqP8Hy.png">
                     <img class="chaveFD" src="https://i.imgur.com/QDPc2ez.png">
                 </div>
                 <ul class="sociais">
@@ -78,7 +165,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2022 Prêmio K-22</p>
+            <p>&copy; 2022 Projeto K-21</p>
         </div>
     </footer>
     <!--FIM FOOTER-->
@@ -86,22 +173,12 @@
 
 </html>
 <script>
-
+    let vetorJDA = []
     let proximaAtualizacao;
 
     window.onload = obterDadosGrafico(1);
 
-    // O gráfico é construído com três funções:
-    // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
-    // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
-    // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
 
-    // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
-    // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
-    // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
-
-    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-    //     Para ajustar o "select", ajuste o comando sql em src/models
     function obterDadosGrafico(idAquario) {
 
         if (proximaAtualizacao != undefined) {
@@ -124,10 +201,6 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
     }
-
-    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
     function plotarGrafico(resposta, i) {
         console.log('iniciando plotagem do gráfico...');
 
@@ -135,10 +208,12 @@
             labels: [],
             datasets: [
                 {
+                    borderSkipped: 'bottom',
                     yAxisID: 'y-umidade',
                     label: 'Votos',
-                    borderColor: 'white',
-                    backgroundColor: 'blue',
+                    borderColor: '#03e9f4',
+                    backgroundColor: '#243b55',
+                    borderWidth: '2',
                     fill: true,
                     data: []
                 },
@@ -157,7 +232,9 @@
             var registro = resposta[i];
             dados.labels.push(registro.nomeJogo);
             dados.datasets[0].data.push(registro.Quantidade_de_Votos);
+            vetorJDA.push(registro.Quantidade_de_Votos);
         }
+
 
         console.log(JSON.stringify(dados));
 
@@ -181,7 +258,7 @@
                         id: 'y-temperatura',
                         ticks: {
                             beginAtZero: true,
-                            max: 100,
+                            max: 50,
                             min: 0
                         }
                     }, {
@@ -191,7 +268,7 @@
                         id: 'y-umidade',
                         ticks: {
                             beginAtZero: true,
-                            max: 100,
+                            max: 50,
                             min: 0
                         },
 
@@ -202,49 +279,511 @@
                 }
             }
         });
+        var votosJDA = Math.max.apply(null, vetorJDA);
 
-        setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+        document.getElementById('votosJDA').innerHTML = votosJDA;
+        if (vetorJDA[0] == votosJDA) {
+            GanhadorJDABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Resident-Evil-Village_1080x1080.jpg)`
+        } else if (vetorJDA[1] == votosJDA) {
+            GanhadorJDABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Cyberpunk-2077_1080x1080.jpg)`
+        } else if (vetorJDA[2] == votosJDA) {
+            GanhadorJDABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Metroid-Dread_1080x1080.jpg)`
+        } else if (vetorJDA[3] == votosJDA) {
+            GanhadorJDABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_It-Takes-Two_1080x1080.jpg)`
+        } else if (vetorJDA[4] == votosJDA) {
+            GanhadorJDABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_FINAL-FANTASY-VIV_1080x1080.jpg)`
+        }
     }
+</script>
+<script>
+    let vetorM = []
+    let proximaAtualizacaoM;
+
+    window.onload = obterDadosGraficoM(1);
 
 
-    // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
-    // buscando a última medida inserida em tabela contendo as capturas, 
+    function obterDadosGraficoM(idAquario) {
 
-    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-    //     Para ajustar o "select", ajuste o comando sql em src/models
-    // function atualizarGrafico(idAquario, dados) {
+        if (proximaAtualizacaoM != undefined) {
+            clearTimeout(proximaAtualizacaoM);
+        }
 
-    //     fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
-    //         if (response.ok) {
-    //             response.json().then(function (novoRegistro) {
+        fetch(`/medidas/ultimasM/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
 
-    //                 console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
-    //                 console.log(`Dados atuais do gráfico: ${dados}`);
+                    plotarGraficoM(resposta, idAquario);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+    function plotarGraficoM(resposta, i) {
+        console.log('iniciando plotagem do gráfico...');
 
-    //                 // tirando e colocando valores no gráfico
-    //                 dados.labels.shift(); // apagar o primeiro
-    //                 dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
-                    
-    //                 dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-    //                 dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
-                    
-    //                 dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
-    //                 dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    borderSkipped: 'bottom',
+                    yAxisID: 'y-umidade',
+                    label: 'Votos',
+                    borderColor: '#03e9f4',
+                    backgroundColor: '#243b55',
+                    borderWidth: '2',
+                    fill: true,
+                    data: []
+                },
+                // {
+                //     yAxisID: 'y-temperatura',
+                //     label: 'Temperatura',
+                //     borderColor: 'white',
+                //     backgroundColor: 'white',
+                //     fill: true,
+                //     data: []
+                // }
+            ]
+        };
 
-    //                 window.grafico_linha.update();
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.nomeJogo);
+            dados.datasets[0].data.push(registro.Quantidade_de_Votos);
+            vetorM.push(registro.Quantidade_de_Votos);
+        }
 
-    //                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-    //                 proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
-    //             });
-    //         } else {
-    //             console.error('Nenhum dado encontrado ou erro na API');
-    //             // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-    //             proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
-    //         }
-    //     })
-    //         .catch(function (error) {
-    //             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-    //         });
 
-    // }
+        console.log(JSON.stringify(dados));
+
+        var ctx = canvas_graficoM.getContext('2d');
+        window.grafico_linha = Chart.Bar(ctx, {
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 500 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: false,
+                    text: 'Dados capturados'
+                },
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-temperatura',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        }
+                    }, {
+                        type: 'linear',
+                        display: false,
+                        position: 'right',
+                        id: 'y-umidade',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        },
+
+                        gridLines: {
+                            drawOnChartArea: false,
+                        },
+                    }],
+                }
+            }
+        });
+        var votosM = Math.max.apply(null, vetorM);
+
+        document.getElementById('votosM').innerHTML = votosM;
+        if (vetorM[0] == votosM) {
+            GanhadorMBTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Back-4-Blood_1080x1080.jpg)`
+        } else if (vetorM[1] == votosM) {
+            GanhadorMBTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Valheim_1080x1080.jpg)`
+        } else if (vetorM[2] == votosM) {
+            GanhadorNBTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_New-World_1080x1080.jpg)`
+        } else if (vetorM[3] == votosM) {
+            GanhadorMBTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Knockout-City_1080x1080.jpg)`
+        } else if (vetorM[4] == votosM) {
+            GanhadorMBTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_FINAL-FANTASY-VIV_1080x1080.jpg)`
+        }
+    }
+</script>
+<script>
+    let vetorA = []
+    let proximaAtualizacaoA;
+
+    window.onload = obterDadosGraficoA(1);
+
+
+    function obterDadosGraficoA(idAquario) {
+
+        if (proximaAtualizacaoA != undefined) {
+            clearTimeout(proximaAtualizacaoA);
+        }
+
+        fetch(`/medidas/ultimasA/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGraficoA(resposta, idAquario);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+    function plotarGraficoA(resposta, i) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    borderSkipped: 'bottom',
+                    yAxisID: 'y-umidade',
+                    label: 'Votos',
+                    borderColor: '#03e9f4',
+                    backgroundColor: '#243b55',
+                    borderWidth: '2',
+                    fill: true,
+                    data: []
+                },
+                // {
+                //     yAxisID: 'y-temperatura',
+                //     label: 'Temperatura',
+                //     borderColor: 'white',
+                //     backgroundColor: 'white',
+                //     fill: true,
+                //     data: []
+                // }
+            ]
+        };
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.nomeJogo);
+            dados.datasets[0].data.push(registro.Quantidade_de_Votos);
+            vetorA.push(registro.Quantidade_de_Votos);
+        }
+
+
+        console.log(JSON.stringify(dados));
+
+        var ctx = canvas_graficoA.getContext('2d');
+        window.grafico_linha = Chart.Bar(ctx, {
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 500 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: false,
+                    text: 'Dados capturados'
+                },
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-temperatura',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        }
+                    }, {
+                        type: 'linear',
+                        display: false,
+                        position: 'right',
+                        id: 'y-umidade',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        },
+
+                        gridLines: {
+                            drawOnChartArea: false,
+                        },
+                    }],
+                }
+            }
+        });
+        var votosA = Math.max.apply(null, vetorA);
+
+        document.getElementById('votosA').innerHTML = votosA;
+        if (vetorA[0] == votosA) {
+            GanhadorABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Deathloop_1080x1080.jpg)`
+        } else if (vetorA[1] == votosA) {
+            GanhadorABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Guardians-of-the-Galaxy_1080x1080.jpg)`
+        } else if (vetorA[2] == votosA) {
+            GanhadorABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_NieR-Replicant_1080x1080.jpg)`
+        } else if (vetorA[3] == votosA) {
+            GanhadorABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_FORZA_1080x1080.jpg)`
+        } else if (vetorA[4] == votosA) {
+            GanhadorABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Ratchet-And_Clank_1080x1080_V2.jpg)`
+        }
+    }
+</script>
+<script>
+    let vetorAA = []
+    let proximaAtualizacaoAA;
+
+    window.onload = obterDadosGraficoAA(1);
+
+
+    function obterDadosGraficoAA(idAquario) {
+
+        if (proximaAtualizacaoAA != undefined) {
+            clearTimeout(proximaAtualizacaoAA);
+        }
+
+        fetch(`/medidas/ultimasAA/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGraficoAA(resposta, idAquario);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+    function plotarGraficoAA(resposta, i) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    borderSkipped: 'bottom',
+                    yAxisID: 'y-umidade',
+                    label: 'Votos',
+                    borderColor: '#03e9f4',
+                    backgroundColor: '#243b55',
+                    borderWidth: '2',
+                    fill: true,
+                    data: []
+                },
+                // {
+                //     yAxisID: 'y-temperatura',
+                //     label: 'Temperatura',
+                //     borderColor: 'white',
+                //     backgroundColor: 'white',
+                //     fill: true,
+                //     data: []
+                // }
+            ]
+        };
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.nomeJogo);
+            dados.datasets[0].data.push(registro.Quantidade_de_Votos);
+            vetorAA.push(registro.Quantidade_de_Votos);
+        }
+
+
+        console.log(JSON.stringify(dados));
+
+        var ctx = canvas_graficoAA.getContext('2d');
+        window.grafico_linha = Chart.Bar(ctx, {
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 500 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: false,
+                    text: 'Dados capturados'
+                },
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-temperatura',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        }
+                    }, {
+                        type: 'linear',
+                        display: false,
+                        position: 'right',
+                        id: 'y-umidade',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        },
+
+                        gridLines: {
+                            drawOnChartArea: false,
+                        },
+                    }],
+                }
+            }
+        });
+        var votosAA = Math.max.apply(null, vetorAA);
+
+        document.getElementById('votosAA').innerHTML = votosAA;
+        if (vetorAA[0] == votosAA) {
+            GanhadorAABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Resident-Evil-Village_1080x1080.jpg)`
+        } else if (vetorAA[1] == votosAA) {
+            GanhadorAABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Back-4-Blood_1080x1080.jpg)`
+        } else if (vetorAA[2] == votosAA) {
+            GanhadorAABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA2021_Nom_Metroid-Dread_1080x1080.jpg)`
+        } else if (vetorAA[3] == votosAA) {
+            GanhadorAABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Far-Cry-6_1080x1080.jpg)`
+        } else if (vetorAA[4] == votosAA) {
+            GanhadorAABTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Guardians-of-the-Galaxy_1080x1080.jpg)`
+        }
+    }
+</script>
+<script>
+    let vetorI = []
+    let proximaAtualizacaoI;
+
+    window.onload = obterDadosGraficoI(1);
+
+
+    function obterDadosGraficoI(idAquario) {
+
+        if (proximaAtualizacaoI != undefined) {
+            clearTimeout(proximaAtualizacaoI);
+        }
+
+        fetch(`/medidas/ultimasI/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGraficoI(resposta, idAquario);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+    function plotarGraficoI(resposta, i) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    borderSkipped: 'bottom',
+                    yAxisID: 'y-umidade',
+                    label: 'Votos',
+                    borderColor: '#03e9f4',
+                    backgroundColor: '#243b55',
+                    borderWidth: '2',
+                    fill: true,
+                    data: []
+                },
+                // {
+                //     yAxisID: 'y-temperatura',
+                //     label: 'Temperatura',
+                //     borderColor: 'white',
+                //     backgroundColor: 'white',
+                //     fill: true,
+                //     data: []
+                // }
+            ]
+        };
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.nomeJogo);
+            dados.datasets[0].data.push(registro.Quantidade_de_Votos);
+            vetorI.push(registro.Quantidade_de_Votos);
+        }
+
+
+        console.log(JSON.stringify(dados));
+
+        var ctx = canvas_graficoI.getContext('2d');
+        window.grafico_linha = Chart.Bar(ctx, {
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 500 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: false,
+                    text: 'Dados capturados'
+                },
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-temperatura',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        }
+                    }, {
+                        type: 'linear',
+                        display: false,
+                        position: 'right',
+                        id: 'y-umidade',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        },
+
+                        gridLines: {
+                            drawOnChartArea: false,
+                        },
+                    }],
+                }
+            }
+        });
+        var votosI = Math.max.apply(null, vetorI);
+
+        document.getElementById('votosI').innerHTML = votosI;
+        if (vetorI[0] == votosI) {
+            GanhadorIBTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Loop-Hero_1080x1080.jpg)`
+        } else if (vetorI[1] == votosI) {
+            GanhadorIBTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_KENA_1080x1080.jpg)`
+        } else if (vetorI[2] == votosI) {
+            GanhadorIBTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Inscryption_1080x1080.jpg)`
+        } else if (vetorI[3] == votosI) {
+            GanhadorIBTN.style.backgroundImage = `url(https://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_Deaths-Door_1080x1080.jpg)`
+        } else if (vetorI[4] == votosI) {
+            GanhadorIBTN.style.backgroundImage = `url(ttps://cdn.thegameawards.com/1/2021/11/TGA_2021_NOMS_12-Minutes_1080x1080.jpg)`
+        }
+    }
 </script>

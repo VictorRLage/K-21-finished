@@ -104,7 +104,7 @@
             <div class="footerEsquerda">
                 <div class="logoFF">
                     <img class="chaveFE" src="https://i.imgur.com/yqyyC1j.png">
-                    <img class="logoF" src="https://i.imgur.com/CujXbZW.png">
+                    <img class="logoF" src="https://i.imgur.com/mtqP8Hy.png">
                     <img class="chaveFD" src="https://i.imgur.com/QDPc2ez.png">
                 </div>
                 <ul class="sociais">
@@ -134,7 +134,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2022 Prêmio K-22</p>
+            <p>&copy; 2022 Projeto K-21</p>
         </div>
     </footer>
     <!--FIM FOOTER-->
@@ -269,9 +269,6 @@
         if (r == conta) {
             modal_containerCapC.classList.add('showCapC');
         }
-        else if (r == 0) {
-            modal_containerCapC.classList.add('showCapC');
-        }
         else {
             modal_containerERROC.classList.add('showERROC');
             modal_containerERROC.addEventListener('click', () => {
@@ -279,10 +276,6 @@
             });
             let aleatorio1 = Number(parseInt(Math.random() * 100))
             let aleatorio2 = Number(parseInt(Math.random() * 100))
-
-
-            numero1.innerHTML = `${aleatorio1}`
-            numero2.innerHTML = `${aleatorio2}`
         }
     }
 </script>
